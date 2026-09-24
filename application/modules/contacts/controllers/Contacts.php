@@ -9,8 +9,11 @@ class Contacts extends MX_Controller
     }
     function index()
     {
-        $data['title'] = "Contact Us | " . $this->comp['company3'];
-        $data['description'] = "Get in touch with " . $this->comp['company3'] . " for all your relocation and transportation needs. Call us at " . $this->comp['phone'] . ".";
+        $company_name = $this->comp['company3'];
+        $phone = $this->comp['phone'];
+        $data['company_name'] = $company_name;
+        $data['title'] = "Contact Us - Get Free Moving Quote | " . $company_name;
+        $data['description'] = "Get in touch with " . $company_name . " for reliable relocation services across India. Call us at " . $phone . " or request a free instant moving estimate online.";
         $data['module'] = "contacts";
         $data['view_file'] = "contacts";
         echo Modules::run('template/layout2', $data);

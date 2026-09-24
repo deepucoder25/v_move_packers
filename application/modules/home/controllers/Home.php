@@ -5,16 +5,20 @@ class Home extends MX_Controller
     function error()
     {
         $this->oldurl_to_newurl();
-        $data['title'] = "Page Not Found | " . $this->comp['company3'];
-        $data['description'] = "The requested page was not found at " . $this->comp['company3'] . ".";
+        $company_name = $this->comp['company3'];
+        $data['company_name'] = $company_name;
+        $data['title'] = "404 Page Not Found | " . $company_name;
+        $data['description'] = "The page you are looking for does not exist on " . $company_name . ". Explore our trusted home shifting, office relocation, and vehicle transport services.";
         $data['module'] = "home";
         $data['view_file'] = "error";
         echo Modules::run('template/layout2', $data);
     }
     function index()
     {
-        $data['title'] = $this->comp['company3'] . ", " . $this->comp['phone'];
-        $data['description'] = "Your trusted partner for hassle-free, secure relocations. Efficient home and office moving services with competitive pricing. Contact " . $this->comp['company3'] . " at " . $this->comp['phone'] . ".";
+        $company_name = $this->comp['company3'];
+        $data['company_name'] = $company_name;
+        $data['title'] = "Best Packers and Movers in India | " . $company_name;
+        $data['description'] = "Looking for reliable packers and movers? " . $company_name . " provides safe household shifting, office relocation, and car or bike transport across India at affordable rates.";
 
         $data['module'] = "home";
         $data['view_file'] = "home";

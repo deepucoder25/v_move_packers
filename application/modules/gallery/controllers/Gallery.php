@@ -8,8 +8,10 @@ class Gallery extends MX_Controller {
 
     function photo_gallery()
     {
-        $data['title'] = "Photo Gallery - Relocation & Transport | " . $this->comp['company3'];
-        $data['description'] = "Browse photos of our household packing process, containerized trucks, warehouse storage, and safe vehicle carrier loading at " . $this->comp['company3'] . ".";
+        $company_name = $this->comp['company3'];
+        $data['company_name'] = $company_name;
+        $data['title'] = "Photo Gallery - Relocation & Transport Operations | " . $company_name;
+        $data['description'] = "Browse photos of our household packing process, containerized trucks, warehouse storage, and safe vehicle carrier loading at " . $company_name . ".";
         
         $photos = [];
         try {
@@ -33,8 +35,10 @@ class Gallery extends MX_Controller {
 
     function video_gallery()
     {
-        $data['title'] = "Video Gallery - Live Moving Operations | " . $this->comp['company3'];
-        $data['description'] = "Watch videos of our packing techniques, car loading, heavy item shifting, and professional relocation operations at " . $this->comp['company3'] . ".";
+        $company_name = $this->comp['company3'];
+        $data['company_name'] = $company_name;
+        $data['title'] = "Video Gallery - Live Shifting & Transport Footage | " . $company_name;
+        $data['description'] = "Watch live moving videos from " . $company_name . " showing our expert packing techniques, car carrier loading, and safe relocation operations in action.";
         
         $videos = [];
         try {
