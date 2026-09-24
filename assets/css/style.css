@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Global Variables & Design Tokens
+   ========================================================================== */
+:root {
+  --bc-bg: #f8fafc;
+  --bc-border: #e2e8f0;
+  --bc-title-color: #0f172a;
+  --bc-link-color: #64748b;
+  --bc-link-hover: #ff7a16;
+  --bc-active-color: #1e293b;
+  --bc-sep-color: #94a3b8;
+  --bc-desc-color: #64748b;
+}
+
+/* ==========================================================================
+   Breadcrumbs Section - Minimal & Clean Design
+   ========================================================================== */
+.dynamic-bc-section,
+.service-breadcrumbs,
+.site-breadcrumb,
+.page_breadcrumbs {
+  background-color: var(--bc-bg);
+  border-bottom: 1px solid var(--bc-border);
+  padding: 22px 0;
+  position: relative;
+  width: 100%;
+}
+
+.dynamic-bc-section .dyn-bc-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.dynamic-bc-section .dyn-bc-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dynamic-bc-section .dyn-bc-title,
+.service-breadcrumbs h1,
+.site-breadcrumb .breadcrumb-title,
+.page_breadcrumbs h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bc-title-color);
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.dynamic-bc-section .dyn-bc-desc,
+.service-breadcrumbs .bc-desc {
+  font-size: 0.875rem;
+  color: var(--bc-desc-color);
+  margin: 0;
+  line-height: 1.5;
+  max-width: 650px;
+}
+
+/* Breadcrumb Navigation Trail */
+.dyn-bc-nav,
+.bc-nav,
+.breadcrumb-menu,
+.page_breadcrumbs .breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.dyn-bc-nav a,
+.bc-nav a,
+.breadcrumb-menu a,
+.page_breadcrumbs .breadcrumb a {
+  color: var(--bc-link-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.dyn-bc-nav a:hover,
+.bc-nav a:hover,
+.breadcrumb-menu a:hover,
+.page_breadcrumbs .breadcrumb a:hover {
+  color: var(--bc-link-hover);
+}
+
+.dyn-bc-sep,
+.bc-sep {
+  color: var(--bc-sep-color);
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.dyn-bc-current,
+.bc-current,
+.breadcrumb-menu .active,
+.page_breadcrumbs .breadcrumb .active {
+  color: var(--bc-active-color);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+@media (max-width: 768px) {
+  .dynamic-bc-section,
+  .service-breadcrumbs,
+  .site-breadcrumb,
+  .page_breadcrumbs {
+    padding: 16px 0;
+  }
+
+  .dynamic-bc-section .dyn-bc-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .dynamic-bc-section .dyn-bc-title,
+  .service-breadcrumbs h1,
+  .site-breadcrumb .breadcrumb-title,
+  .page_breadcrumbs h1 {
+    font-size: 1.25rem;
+  }
+
+  .dyn-bc-nav,
+  .bc-nav,
+  .breadcrumb-menu,
+  .page_breadcrumbs .breadcrumb {
+    font-size: 0.8125rem;
+    gap: 6px;
+  }
+}
