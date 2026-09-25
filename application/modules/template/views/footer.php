@@ -81,12 +81,11 @@
           <ul class="footer-links list-unstyled mb-0">
             <li><a href="<?= site_url('about-us') ?>"><i class="bi bi-chevron-right"></i> About Company</a></li>
             <li><a href="<?= site_url('why-choose-us') ?>"><i class="bi bi-chevron-right"></i> Why Choose Us</a></li>
-            <li><a href="<?= site_url('photo-gallery') ?>"><i class="bi bi-chevron-right"></i> Photo Gallery</a></li>
-            <li><a href="<?= site_url('video-gallery') ?>"><i class="bi bi-chevron-right"></i> Video Gallery</a></li>
             <li><a href="<?= site_url('reviews') ?>"><i class="bi bi-chevron-right"></i> Customer Reviews</a></li>
             <li><a href="<?= site_url('faqs') ?>"><i class="bi bi-chevron-right"></i> Helpful FAQs</a></li>
+            <li><a href="<?= site_url('privacy-policy') ?>"><i class="bi bi-chevron-right"></i> Privacy Policy</a></li>
+            <li><a href="<?= site_url('terms-and-conditions') ?>"><i class="bi bi-chevron-right"></i> Terms &amp; Conditions</a></li>
             <li><a href="<?= site_url('our-branches') ?>"><i class="bi bi-chevron-right"></i> Our Branches</a></li>
-            <li><a href="<?= site_url('tracking') ?>"><i class="bi bi-chevron-right"></i> Track Order <span class="badge rounded-pill pulse-badge text-white ms-1">LIVE</span></a></li>
             <li><a href="<?= site_url('blog') ?>"><i class="bi bi-chevron-right"></i> Moving Blog</a></li>
             <li><a href="<?= site_url('contact-us') ?>"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
           </ul>
@@ -149,13 +148,9 @@
           <div class="d-flex align-items-center justify-content-center justify-content-md-end gap-3 small flex-wrap">
             <a href="<?= site_url('about-us') ?>" class="footer-bottom-link text-decoration-none">About Us</a>
             <span class="text-white-50">&bull;</span>
-            <a href="<?= site_url('our-branches') ?>" class="footer-bottom-link text-decoration-none">Our Branches</a>
+            <a href="<?= site_url('privacy-policy') ?>" class="footer-bottom-link text-decoration-none">Privacy Policy</a>
             <span class="text-white-50">&bull;</span>
-            <a href="<?= site_url('tracking') ?>" class="footer-bottom-link text-decoration-none">Track Order</a>
-            <span class="text-white-50">&bull;</span>
-            <a href="<?= site_url('blog') ?>" class="footer-bottom-link text-decoration-none">Blog</a>
-            <span class="text-white-50">&bull;</span>
-            <a href="<?= site_url('contact-us') ?>" class="footer-bottom-link text-decoration-none">Contact Us</a>
+            <a href="<?= site_url('terms-and-conditions') ?>" class="footer-bottom-link text-decoration-none">Terms &amp; Conditions</a>
           </div>
         </div>
       </div>

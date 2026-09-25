@@ -34,16 +34,6 @@ class About extends MX_Controller
         echo Modules::run('template/layout2', $data);
     }
 
-    function testimonials()
-    {
-        $company_name = $this->comp['company3'];
-        $data['company_name'] = $company_name;
-        $data['title'] = "Customer Testimonials & Verified Moving Reviews | " . $company_name;
-        $data['description'] = "Read real customer reviews and experiences with " . $company_name . ". See why our household relocation and vehicle transport services are rated 5 stars.";
-        $data['module'] = "about";
-        $data['view_file'] = "testimonials";
-        echo Modules::run('template/layout2', $data);
-    }
 
     function reviews()
     {

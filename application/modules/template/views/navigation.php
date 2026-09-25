@@ -58,11 +58,6 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
           <i class="bi bi-clock-history topbar-icon"></i> 24x7 Shifting Support
         </span>
 
-        <a href="<?= site_url('tracking') ?>" class="d-inline-flex align-items-center gap-1 text-decoration-none text-white">
-          <i class="bi bi-crosshair2 topbar-icon"></i>
-          <span>Track Order</span>
-        </a>
-
         <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener noreferrer" class="topbar-wa-btn d-inline-flex align-items-center gap-1 text-decoration-none">
           <i class="bi bi-whatsapp"></i>
           <span>WhatsApp</span>
@@ -78,11 +73,6 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
       </span>
 
       <div class="d-flex align-items-center gap-2 flex-nowrap">
-        <a href="<?= site_url('tracking') ?>" class="d-inline-flex align-items-center gap-1 text-decoration-none text-white text-nowrap topbar-mobile-track">
-          <i class="bi bi-crosshair2 topbar-icon"></i>
-          <span>Track</span>
-        </a>
-
         <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener noreferrer" class="topbar-wa-btn d-inline-flex align-items-center gap-1 text-decoration-none text-nowrap">
           <i class="bi bi-whatsapp"></i>
           <span>WhatsApp</span>
@@ -158,30 +148,6 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
                 </a>
               </li>
               <li>
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('photo-gallery') ?>">
-                  <div class="d-flex align-items-center">
-                    <span class="dropdown-item-icon"><i class="bi bi-images"></i></span>
-                    <div>
-                      <span class="dropdown-item-title">Photo Gallery</span>
-                      <span class="dropdown-item-desc">Live packing &amp; fleet photos</span>
-                    </div>
-                  </div>
-                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('video-gallery') ?>">
-                  <div class="d-flex align-items-center">
-                    <span class="dropdown-item-icon"><i class="bi bi-camera-video"></i></span>
-                    <div>
-                      <span class="dropdown-item-title">Video Gallery</span>
-                      <span class="dropdown-item-desc">Field videos &amp; operations</span>
-                    </div>
-                  </div>
-                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
-                </a>
-              </li>
-              <li>
                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('faqs') ?>">
                   <div class="d-flex align-items-center">
                     <span class="dropdown-item-icon"><i class="bi bi-question-circle"></i></span>
@@ -200,6 +166,30 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
                     <div>
                       <span class="dropdown-item-title">Customer Reviews</span>
                       <span class="dropdown-item-desc">Verified 5-star testimonials</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('privacy-policy') ?>">
+                  <div class="d-flex align-items-center">
+                    <span class="dropdown-item-icon"><i class="bi bi-shield-check"></i></span>
+                    <div>
+                      <span class="dropdown-item-title">Privacy Policy</span>
+                      <span class="dropdown-item-desc">Customer data &amp; privacy rights</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('terms-and-conditions') ?>">
+                  <div class="d-flex align-items-center">
+                    <span class="dropdown-item-icon"><i class="bi bi-file-earmark-text"></i></span>
+                    <div>
+                      <span class="dropdown-item-title">Terms &amp; Conditions</span>
+                      <span class="dropdown-item-desc">Service agreement &amp; moving terms</span>
                     </div>
                   </div>
                   <i class="bi bi-chevron-right dropdown-item-arrow"></i>
@@ -298,14 +288,7 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
             </a>
           </li>
 
-          <!-- Tracking with Live Badge -->
-          <li class="nav-item">
-            <a class="nav-link <?= $active_tab === 'tracking' ? 'active' : '' ?>" href="<?= site_url('tracking') ?>">
-              <i class="bi bi-crosshair2"></i>
-              <span>Tracking</span>
-              <span class="badge rounded-pill pulse-badge text-white ms-1">Live</span>
-            </a>
-          </li>
+
 
           <!-- Blog -->
           <li class="nav-item">
@@ -397,10 +380,10 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
           <div class="collapse <?= $active_tab === 'about' ? 'show' : '' ?> mobile-submenu" id="mobileAboutSubmenu">
             <a href="<?= site_url('about-us') ?>" class="mobile-sub-link"><i class="bi bi-building"></i> About Company</a>
             <a href="<?= site_url('why-choose-us') ?>" class="mobile-sub-link"><i class="bi bi-award"></i> Why Choose Us</a>
-            <a href="<?= site_url('photo-gallery') ?>" class="mobile-sub-link"><i class="bi bi-images"></i> Photo Gallery</a>
-            <a href="<?= site_url('video-gallery') ?>" class="mobile-sub-link"><i class="bi bi-play-btn"></i> Video Gallery</a>
             <a href="<?= site_url('faqs') ?>" class="mobile-sub-link"><i class="bi bi-question-circle"></i> FAQs</a>
             <a href="<?= site_url('reviews') ?>" class="mobile-sub-link"><i class="bi bi-star"></i> Customer Reviews</a>
+            <a href="<?= site_url('privacy-policy') ?>" class="mobile-sub-link"><i class="bi bi-shield-check"></i> Privacy Policy</a>
+            <a href="<?= site_url('terms-and-conditions') ?>" class="mobile-sub-link"><i class="bi bi-file-earmark-text"></i> Terms &amp; Conditions</a>
           </div>
         </div>
 
@@ -431,14 +414,7 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
           </span>
         </a>
 
-        <!-- Tracking -->
-        <a href="<?= site_url('tracking') ?>" class="mobile-nav-link <?= $active_tab === 'tracking' ? 'active' : '' ?>">
-          <span class="d-flex align-items-center gap-2">
-            <span class="drawer-icon-box"><i class="bi bi-crosshair2 text-danger"></i></span>
-            <span>Consignment Tracking</span>
-          </span>
-          <span class="badge rounded-pill pulse-badge text-white">Live</span>
-        </a>
+
 
         <!-- Blog -->
         <a href="<?= site_url('blog') ?>" class="mobile-nav-link <?= $active_tab === 'blog' ? 'active' : '' ?>">
@@ -506,7 +482,6 @@ $nav_schema = [
     ["@type" => "SiteNavigationElement", "name" => "Car Transportation", "url" => site_url('car-transportation')],
     ["@type" => "SiteNavigationElement", "name" => "Bike Transportation", "url" => site_url('bike-transportation')],
     ["@type" => "SiteNavigationElement", "name" => "Our Branches", "url" => site_url('our-branches')],
-    ["@type" => "SiteNavigationElement", "name" => "Consignment Tracking", "url" => site_url('tracking')],
     ["@type" => "SiteNavigationElement", "name" => "Moving Blog", "url" => site_url('blog')],
     ["@type" => "SiteNavigationElement", "name" => "Contact Us", "url" => site_url('contact-us')]
   ]

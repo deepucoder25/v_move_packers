@@ -3775,3 +3775,790 @@
     font-size: 0.885rem;
   }
 }
+
+/* --------------------------------------------------------------------------
+   1. Section Layout & Base Styles
+   -------------------------------------------------------------------------- */
+.about-section {
+  padding: 55px 0;
+  position: relative;
+}
+
+.about-section.bg-surface {
+  background-color: var(--nav-surface);
+}
+
+.about-section.bg-light {
+  background-color: var(--nav-light);
+}
+
+.about-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nav-primary);
+  background: rgba(148, 1, 17, 0.08);
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.about-heading {
+  font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+  font-weight: 800;
+  color: var(--nav-dark);
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.about-heading span {
+  color: var(--nav-primary);
+}
+
+.about-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.about-subtitle-center {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Normal Image Design (Simple & Clean, No Overlapping or Badges)
+   -------------------------------------------------------------------------- */
+.about-image-wrap {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--nav-border);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.about-image-wrap img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. Simple Checkpoints List & Action Buttons
+   -------------------------------------------------------------------------- */
+.about-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.about-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--nav-dark);
+  margin-bottom: 10px;
+}
+
+.about-checklist li i {
+  color: var(--nav-primary);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.about-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-about-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--nav-primary);
+  color: var(--nav-light) !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--nav-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-about-primary:hover {
+  background: var(--nav-primary-hover);
+  border-color: var(--nav-primary-hover);
+  color: var(--nav-light) !important;
+}
+
+.btn-about-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--nav-dark) !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1.5px solid var(--nav-border);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-about-outline:hover {
+  border-color: var(--nav-primary);
+  color: var(--nav-primary) !important;
+  background: rgba(148, 1, 17, 0.04);
+}
+
+.btn-about-wa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25d366;
+  color: var(--nav-light) !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #25d366;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-about-wa:hover {
+  background: #1eb857;
+  border-color: #1eb857;
+}
+
+/* --------------------------------------------------------------------------
+   4. Simple Stats Strip
+   -------------------------------------------------------------------------- */
+.about-stat-card {
+  background: var(--nav-surface);
+  border: 1px solid var(--nav-border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  height: 100%;
+}
+
+.about-stat-number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--nav-primary);
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.about-stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--nav-dark);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. Simple Cards (Mission, Values, Features)
+   -------------------------------------------------------------------------- */
+.about-simple-card {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+.about-simple-card:hover {
+  border-color: var(--nav-primary);
+  box-shadow: 0 6px 18px rgba(148, 1, 17, 0.08);
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.about-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(148, 1, 17, 0.08);
+  color: var(--nav-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.about-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--nav-dark);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.about-card-text {
+  font-size: 0.9rem;
+  color: #555e6d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Simple CTA Box (Shared)
+   -------------------------------------------------------------------------- */
+.about-simple-cta {
+  background: var(--nav-surface);
+  border: 1px solid var(--nav-border);
+  border-left: 4px solid var(--nav-primary);
+  border-radius: 10px;
+  padding: 26px 24px;
+}
+
+.about-cta-text h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  margin-bottom: 6px;
+}
+
+.about-cta-text p {
+  font-size: 0.925rem;
+  color: #555e6d;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. Fully Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .about-section {
+    padding: 42px 0;
+  }
+
+  .about-image-wrap {
+    margin-bottom: 24px;
+  }
+
+  .about-image-wrap img {
+    height: 300px;
+  }
+
+
+}
+
+@media (max-width: 575.98px) {
+  .about-section {
+    padding: 32px 0;
+  }
+
+  .about-heading {
+    font-size: 1.45rem;
+  }
+
+  .about-image-wrap img {
+    height: 220px;
+  }
+
+  .about-btn-group {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .about-btn-group .btn-about-primary,
+  .about-btn-group .btn-about-outline,
+  .about-btn-group .btn-about-wa {
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+    width: auto !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    font-size: 0.85rem !important;
+    padding: 8px 10px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  .about-btn-group .btn-about-primary i,
+  .about-btn-group .btn-about-outline i,
+  .about-btn-group .btn-about-wa i {
+    font-size: 0.95rem;
+  }
+
+  .about-simple-cta {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-btn-group {
+    gap: 8px !important;
+  }
+
+  .about-btn-group .btn-about-primary,
+  .about-btn-group .btn-about-outline,
+  .about-btn-group .btn-about-wa {
+    font-size: 0.82rem !important;
+    padding: 8px 6px !important;
+    gap: 5px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Filter Pills Bar (FAQs & Testimonials)
+   -------------------------------------------------------------------------- */
+.filter-pills-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+.filter-pills-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--nav-dark);
+  background: var(--nav-surface);
+  border: 1px solid var(--nav-border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.filter-pill-btn:hover {
+  border-color: var(--nav-primary);
+  color: var(--nav-primary);
+  background: rgba(148, 1, 17, 0.04);
+}
+
+.filter-pill-btn.active {
+  background: var(--nav-primary);
+  border-color: var(--nav-primary);
+  color: var(--nav-light);
+}
+
+/* --------------------------------------------------------------------------
+   10. FAQs Page Specific Styles
+   -------------------------------------------------------------------------- */
+.faq-accordion .accordion-item {
+  border: 1px solid var(--nav-border);
+  border-radius: 10px !important;
+  margin-bottom: 12px;
+  background: var(--nav-light);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faq-accordion .accordion-item:hover {
+  border-color: rgba(148, 1, 17, 0.35);
+}
+
+.faq-accordion .accordion-button {
+  padding: 16px 20px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--nav-dark);
+  background: var(--nav-light);
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  color: var(--nav-primary);
+  background: rgba(148, 1, 17, 0.04);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.faq-q-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--nav-surface);
+  color: var(--nav-primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  border: 1px solid var(--nav-border);
+}
+
+.faq-accordion .accordion-button:not(.collapsed) .faq-q-number {
+  background: var(--nav-primary);
+  color: var(--nav-light);
+  border-color: var(--nav-primary);
+}
+
+.faq-accordion .accordion-body {
+  padding: 18px 20px;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #555e6d;
+}
+
+.faq-support-sidebar {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 110px;
+  z-index: 15;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.faq-support-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(148, 1, 17, 0.08);
+  color: var(--nav-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.faq-support-sidebar h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  margin-bottom: 8px;
+}
+
+.faq-support-sidebar p {
+  font-size: 0.88rem;
+  color: #6c757d;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.faq-trust-mini-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--nav-dark);
+  margin-bottom: 8px;
+}
+
+.faq-trust-mini-item i {
+  color: var(--nav-primary);
+  font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. Testimonials Page Specific Styles
+   -------------------------------------------------------------------------- */
+.testimonials-hero-card {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 14px;
+  padding: 28px 24px;
+  margin-bottom: 32px;
+}
+
+.testimonial-rating-score {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--nav-dark);
+}
+
+.testimonial-card {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  border-color: var(--nav-primary);
+  box-shadow: 0 8px 24px rgba(148, 1, 17, 0.08);
+  transform: translateY(-2px);
+}
+
+.testimonial-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.testimonial-author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(148, 1, 17, 0.1);
+  color: var(--nav-primary);
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-author-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  margin-bottom: 2px;
+}
+
+.testimonial-badge-verified {
+  font-size: 0.75rem;
+  color: #198754;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.testimonial-route-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--nav-primary);
+  background: rgba(148, 1, 17, 0.06);
+  padding: 3px 10px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.testimonial-stars {
+  color: #ffb703;
+  font-size: 0.88rem;
+  margin-bottom: 12px;
+}
+
+.testimonial-quote-text {
+  font-size: 0.88rem;
+  color: #495057;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.testimonial-card-footer {
+  font-size: 0.78rem;
+  color: #8892a0;
+  border-top: 1px solid var(--nav-border);
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   12. Legal Pages (Privacy Policy & Terms and Conditions)
+   -------------------------------------------------------------------------- */
+.legal-card {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  margin-bottom: 24px;
+  transition: all 0.2s ease;
+  scroll-margin-top: 120px;
+}
+
+.legal-card:hover {
+  border-color: rgba(148, 1, 17, 0.3);
+}
+
+.legal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.legal-card-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--nav-primary);
+  color: var(--nav-light);
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.legal-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  margin: 0;
+}
+
+.legal-card p,
+.legal-card li {
+  font-size: 0.92rem;
+  color: #495057;
+  line-height: 1.7;
+}
+
+.legal-card ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.legal-card ul li {
+  margin-bottom: 8px;
+}
+
+.legal-callout {
+  background: rgba(148, 1, 17, 0.04);
+  border-left: 4px solid var(--nav-primary);
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin: 16px 0;
+  font-size: 0.88rem;
+  color: var(--nav-dark);
+}
+
+.legal-toc-card {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 12px;
+  padding: 22px 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 110px;
+  z-index: 15;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.legal-toc-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legal-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legal-toc-list li {
+  margin-bottom: 8px;
+}
+
+.legal-toc-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555e6d;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.legal-toc-link:hover {
+  background: rgba(148, 1, 17, 0.06);
+  color: var(--nav-primary);
+}
+
+.prohibited-tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.prohibited-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  background: #fff0f1;
+  color: #c9182b;
+  border: 1px solid #ffd0d4;
+  border-radius: 50px;
+}
+
+@media (max-width: 991.98px) {
+  .faq-support-sidebar,
+  .legal-toc-card {
+    position: static !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    margin-bottom: 24px;
+  }
+}
+
