@@ -1640,3 +1640,470 @@
   color: #334155 !important;
 }
 
+/* --------------------------------------------------------------------------
+   Hero Section Layout & Background
+   -------------------------------------------------------------------------- */
+.hero-slider-section {
+  position: relative;
+  background-color: var(--nav-dark);
+  overflow: hidden;
+  padding: 42px 0;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  transform: scale(1.02);
+}
+
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 21, 27, 0.65) 0%,
+    rgba(18, 21, 27, 0.45) 45%,
+    rgba(18, 21, 27, 0.18) 75%,
+    rgba(18, 21, 27, 0.12) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-slide-container {
+  z-index: 3;
+}
+
+.hero-slide-content {
+  color: var(--nav-light);
+  padding-right: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Left Column Typography & Action Buttons
+   -------------------------------------------------------------------------- */
+.hero-badge-wrap {
+  margin-bottom: 12px;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(148, 1, 17, 0.85);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.hero-pill-badge i {
+  font-size: 0.875rem;
+}
+
+.hero-title {
+  color: var(--nav-light);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 4px 16px rgba(0, 0, 0, 0.85);
+}
+
+.hero-text-accent {
+  color: #ff334b;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 25px rgba(255, 51, 75, 0.6);
+}
+
+.hero-subtitle {
+  color: #ffffff;
+  font-size: clamp(0.92rem, 1.15vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  max-width: 580px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+.hero-feature-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 21, 27, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.hero-chip i {
+  color: #25d366;
+  font-size: 0.85rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  color: var(--nav-light) !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 5px 16px rgba(148, 1, 17, 0.5);
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-hero-primary:hover {
+  background: linear-gradient(135deg, var(--nav-primary-hover) 0%, #5a0a14 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(148, 1, 17, 0.65);
+}
+
+.btn-hero-wa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25d366;
+  color: var(--nav-light) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.btn-hero-wa:hover {
+  background: #1eb857;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   3. Right Column Quote Card Container & Header
+   -------------------------------------------------------------------------- */
+.hero-quote-card-container {
+  background: var(--nav-light);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28), 0 4px 12px rgba(18, 21, 27, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero-quote-card-container:hover {
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.32), 0 6px 16px rgba(18, 21, 27, 0.14);
+}
+
+.hero-quote-header {
+  background: linear-gradient(135deg, var(--nav-dark) 0%, #1e242f 100%);
+  border-bottom: 3px solid var(--nav-primary);
+  padding: 13px 18px;
+}
+
+.quote-header-badge-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(148, 1, 17, 0.45);
+  border: 1px solid rgba(148, 1, 17, 0.65);
+  color: #ff546c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.hero-quote-title {
+  color: var(--nav-light);
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.hero-quote-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.quote-save-badge {
+  background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  color: var(--nav-light);
+  font-size: 0.725rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 50px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(148, 1, 17, 0.4);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hero-quote-white-card {
+  padding: 18px 20px 20px 20px;
+  background-color: var(--nav-light);
+}
+
+/* --------------------------------------------------------------------------
+   4. Form Grid & Floating Label Controls
+   -------------------------------------------------------------------------- */
+.form-row-custom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.form-row-custom > .btn-submit-custom {
+  grid-column: span 2;
+}
+
+/* Eliminate Bootstrap 5 white-box pseudo-element on floating labels */
+.form-floating.input-wrap-custom > label::after {
+  display: none !important;
+  content: none !important;
+}
+
+.form-floating.input-wrap-custom > .form-control-custom,
+.form-floating.input-wrap-custom > .form-select-custom {
+  height: 50px !important;
+  min-height: 50px !important;
+  padding: 18px 12px 4px 12px !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--nav-dark);
+  background-color: var(--nav-surface);
+  border: 1.5px solid var(--nav-border);
+  border-radius: 9px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  line-height: 1.25;
+}
+
+.form-floating.input-wrap-custom > .form-control-custom:focus,
+.form-floating.input-wrap-custom > .form-select-custom:focus {
+  border-color: var(--nav-primary);
+  background-color: var(--nav-light);
+  box-shadow: 0 0 0 3px rgba(148, 1, 17, 0.14);
+  outline: none;
+}
+
+.form-floating.input-wrap-custom > .form-select-custom {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2312151b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 13px 9px;
+  cursor: pointer;
+}
+
+.form-floating.input-wrap-custom > label {
+  position: absolute;
+  top: 14px !important;
+  left: 12px !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+  color: #6c757d;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent !important;
+  z-index: 5;
+  transform: none !important;
+}
+
+.float-icon {
+  color: var(--nav-primary);
+  font-size: 0.925rem;
+}
+
+/* Floating Label Active / Filled States */
+.form-floating.input-wrap-custom > .form-control-custom:focus ~ label,
+.form-floating.input-wrap-custom > .form-control-custom:not(:placeholder-shown) ~ label,
+.form-floating.input-wrap-custom > .form-select-custom:focus ~ label,
+.form-floating.input-wrap-custom > .form-select-custom:valid ~ label,
+.form-floating.input-wrap-custom > input[type="date"] ~ label {
+  top: 4px !important;
+  font-size: 0.685rem !important;
+  font-weight: 700 !important;
+  color: var(--nav-primary) !important;
+}
+
+.form-floating.input-wrap-custom > input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(12%) sepia(85%) saturate(5500%) hue-rotate(345deg) brightness(85%) contrast(105%);
+}
+
+/* --------------------------------------------------------------------------
+   5. Submit Button
+   -------------------------------------------------------------------------- */
+.btn-submit-custom {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  color: var(--nav-light);
+  font-weight: 700;
+  font-size: 0.925rem;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(148, 1, 17, 0.38);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.btn-submit-custom:hover {
+  background: linear-gradient(135deg, var(--nav-primary-hover) 0%, #5a0a14 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(148, 1, 17, 0.5);
+}
+
+.btn-submit-custom:active {
+  transform: translateY(0);
+}
+
+.submit-btn-icon-desktop {
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+.submit-btn-icon-mobile {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .hero-slider-section {
+    padding: 32px 0 40px 0;
+  }
+
+  .hero-slide-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(18, 21, 27, 0.68) 0%,
+      rgba(18, 21, 27, 0.45) 55%,
+      rgba(18, 21, 27, 0.25) 100%
+    );
+  }
+
+  .hero-slide-content {
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-slider-section {
+    padding: 24px 0 32px 0;
+  }
+
+  .hero-slide-content {
+    margin-bottom: 20px;
+  }
+
+  .form-row-custom {
+    gap: 8px;
+  }
+
+  /* Select Service and Moving Date full width on mobile (Row 2 & 3) */
+  .form-row-custom > .input-wrap-custom:nth-child(3),
+  .form-row-custom > .input-wrap-custom:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .form-floating.input-wrap-custom > .form-control-custom,
+  .form-floating.input-wrap-custom > .form-select-custom {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+    font-size: 0.825rem !important;
+  }
+
+  .form-floating.input-wrap-custom > label {
+    left: 9px !important;
+    font-size: 0.785rem !important;
+  }
+
+  .form-floating.input-wrap-custom > .form-control-custom:focus ~ label,
+  .form-floating.input-wrap-custom > .form-control-custom:not(:placeholder-shown) ~ label,
+  .form-floating.input-wrap-custom > .form-select-custom:focus ~ label,
+  .form-floating.input-wrap-custom > .form-select-custom:valid ~ label,
+  .form-floating.input-wrap-custom > input[type="date"] ~ label {
+    font-size: 0.65rem !important;
+  }
+
+  .submit-btn-icon-desktop {
+    display: none;
+  }
+
+  .submit-btn-icon-mobile {
+    display: inline-block;
+  }
+
+  .btn-hero-primary {
+    flex: 1 1 auto;
+  }
+}

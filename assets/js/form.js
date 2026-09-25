@@ -1,35 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Inject custom validation styles
+    // Inject custom validation styles with clean, non-distorting error aesthetics
     if (!document.getElementById("validation-custom-styles")) {
         const style = document.createElement("style");
         style.id = "validation-custom-styles";
         style.innerHTML = `
             .input-error-highlight {
-                border: 2px solid #ff3333 !important;
-                box-shadow: 0 0 10px rgba(255, 51, 51, 0.5) !important;
-                transition: all 0.3s ease-in-out !important;
+                border-color: #dc3545 !important;
+                box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2) !important;
+                transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
             }
             .field-error-msg {
-                color: #ff3333 !important;
-                font-size: 0.75rem !important;
-                font-weight: bold !important;
-                margin-top: 5px !important;
+                color: #dc3545 !important;
+                background-color: rgba(220, 53, 69, 0.08) !important;
+                border: 1px solid rgba(220, 53, 69, 0.25) !important;
+                font-size: 0.8125rem !important;
+                font-weight: 600 !important;
+                margin-top: 10px !important;
                 margin-bottom: 5px !important;
                 text-align: left !important;
-                padding-left: 10px !important;
+                padding: 8px 12px !important;
+                border-radius: 8px !important;
                 display: flex !important;
                 align-items: center !important;
-                gap: 5px !important;
+                gap: 8px !important;
                 animation: fieldErrorFadeIn 0.3s ease-out !important;
             }
-            .field-wrap .field-ico {
-                top: 14px !important;
-            }
-            .field-wrap.top-ico .field-ico {
-                top: 14px !important;
+            .field-error-msg i {
+                font-size: 1rem !important;
+                color: #dc3545 !important;
+                flex-shrink: 0 !important;
             }
             @keyframes fieldErrorFadeIn {
-                from { opacity: 0; transform: translateY(-5px); }
+                from { opacity: 0; transform: translateY(-4px); }
                 to { opacity: 1; transform: translateY(0); }
             }
         `;
@@ -55,27 +57,37 @@ document.addEventListener("DOMContentLoaded", function () {
             const phoneInput = form.querySelector('input[name="phone"]');
 
             let hasErrors = false;
+            let firstInvalidInput = null;
 
-            // Helper to show field error
+            // Helper to show field error cleanly without distorting form grid
             function showError(inputEl, message) {
                 if (!inputEl) return;
                 inputEl.classList.add("input-error-highlight");
                 
+                if (!firstInvalidInput) {
+                    firstInvalidInput = inputEl;
+                }
+
+                // Remove highlight as soon as user types
+                inputEl.addEventListener("input", function onInput() {
+                    inputEl.classList.remove("input-error-highlight");
+                    const existingMsg = form.querySelector(".field-error-msg");
+                    if (existingMsg) existingMsg.remove();
+                    inputEl.removeEventListener("input", onInput);
+                });
+
                 const errorDiv = document.createElement("div");
                 errorDiv.className = "field-error-msg";
-                errorDiv.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> ${message}`;
+                errorDiv.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> <span>${message}</span>`;
                 
-                // Find the wrapper (either .field-wrap, .form-group, or parent)
-                const wrapper = inputEl.closest(".field-wrap") || inputEl.closest(".form-group") || inputEl.parentElement;
-                
-                // Force wrap if wrapper is a flex container
-                const computedStyle = window.getComputedStyle(wrapper);
-                if (computedStyle.display === "flex") {
-                    wrapper.style.flexWrap = "wrap";
+                // If a resultBox exists, show message there cleanly to preserve grid alignment
+                if (resultBox) {
+                    resultBox.innerHTML = "";
+                    resultBox.appendChild(errorDiv);
+                } else {
+                    const wrapper = inputEl.closest(".form-group") || inputEl.parentElement;
+                    wrapper.appendChild(errorDiv);
                 }
-                
-                // Append inside the wrapper
-                wrapper.appendChild(errorDiv);
             }
 
             // Validate Name
@@ -88,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // Validate Phone
-            if (phoneInput) {
+            if (phoneInput && !hasErrors) {
                 const val = phoneInput.value.trim();
                 if (!val) {
                     showError(phoneInput, "The Mobile field is required.");
@@ -103,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (hasErrors) {
-                if (resultBox) {
-                    resultBox.innerHTML = ""; // Clear loader/previous messages
+                if (firstInvalidInput) {
+                    firstInvalidInput.focus();
                 }
                 return; // Stop form submission
             }

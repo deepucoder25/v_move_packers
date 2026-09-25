@@ -1,110 +1,98 @@
   <div class="hero-quote-card-container" itemscope itemtype="https://schema.org/QuoteAction">
-            <!-- Card Header -->
-            <div class="hero-quote-header">
-              <h3 class="hero-quote-title" itemprop="name">Get Your Best Moving Quote</h3>
-              <p class="hero-quote-subtitle" itemprop="description">Quick, Fast & Free Estimates</p>
+    <!-- Card Header with Catchy New Heading & Discount Badge -->
+    <div class="hero-quote-header">
+      <div class="quote-header-content d-flex align-items-center justify-content-between w-100">
+        <div class="d-flex align-items-center gap-2">
+          <div class="quote-header-badge-icon">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <div>
+            <h3 class="hero-quote-title" itemprop="name">Instant Moving Estimate</h3>
+            <p class="hero-quote-subtitle" itemprop="description">Fast &bull; Transparent &bull; 100% Free</p>
+          </div>
+        </div>
+        <span class="quote-save-badge">
+          <i class="bi bi-tag-fill me-1"></i> Save 20%
+        </span>
+      </div>
+    </div>
+    
+    <div class="hero-quote-white-card">
+      <!-- Card Body / Form -->
+      <div class="card-body-form">
+        <form id="quoteform" class="ajax-form" data-url="<?php echo site_url('contacts/booking') ?>" data-result="quoteformresults" onsubmit="return false;">
+          
+          <div class="form-row-custom">
+            <!-- Name Input with Floating Label -->
+            <div class="form-floating input-wrap-custom">
+              <input type="text" name="name" class="form-control form-control-custom" id="quote_name" placeholder="Your Name" required>
+              <label for="quote_name">
+                <i class="bi bi-person-fill float-icon"></i> Your Name
+              </label>
             </div>
             
-            <div class="hero-quote-white-card">
-              <!-- Card Body / Form -->
-              <div class="card-body-form">
-                <form id="quoteform" class="ajax-form" data-url="<?php echo site_url('contacts/booking') ?>" data-result="quoteformresults" onsubmit="return false;">
-                  
-                  <div class="form-row-custom">
-                    <!-- Name Input -->
-                    <div class="input-wrap-custom">
-                      <i class="bi bi-person input-icon-custom"></i>
-                      <input type="text" name="name" class="form-control-custom" placeholder="Your Name" >
-                    </div>
-                    
-                    <!-- Phone Input -->
-                    <div class="input-wrap-custom">
-                      <i class="bi bi-telephone input-icon-custom"></i>
-                      <input type="tel" name="phone" class="form-control-custom" placeholder="Phone Number" >
-                    </div>
-                    
-                    <!-- Email Input -->
-                    <div class="input-wrap-custom">
-                      <i class="bi bi-envelope input-icon-custom"></i>
-                      <input type="email" name="email" class="form-control-custom" placeholder="Email Address" >
-                    </div>
-                    
-                    <!-- Select Service -->
-                    <div class="input-wrap-custom select-wrap-custom">
-                      <span class="select-label-custom">Select Service</span>
-                      <select name="mtype" class="form-select-custom" >
-                        <option value="" disabled selected>Select Service</option>
-                        <option>Household Relocation</option>
-                        <option>Office Relocation</option>
-                        <option>Car/Bike Shifting</option>
-                        <option>Warehousing</option>
-                      </select>
-                    </div>
-                    
-                    <!-- Moving From -->
-                    <div class="input-wrap-custom half-width-mobile">
-                      <i class="bi bi-geo-alt input-icon-custom"></i>
-                      <input type="text" name="mfrom" class="form-control-custom" value="<?= @$city ?>" placeholder="Moving From" >
-                    </div>
-                    
-                    <!-- Moving To -->
-                    <div class="input-wrap-custom half-width-mobile">
-                      <i class="bi bi-geo-alt input-icon-custom"></i>
-                      <input type="text" name="mto" class="form-control-custom" placeholder="Moving To" >
-                    </div>
-                    
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn-submit-custom">
-                      <i class="bi bi-send submit-btn-icon-desktop"></i>
-                      <i class="bi bi-file-earmark-text submit-btn-icon-mobile"></i>
-                      <span>Get Quote</span>
-                    </button>
-                  </div>
-                  
-                  <div id="quoteformresults"></div>
-                </form>
-              </div>
-              
-              <!-- Card Footer / Trust Badge Bar (Desktop Only) -->
-              <div class="card-footer-trust d-none d-lg-flex justify-content-between align-items-center">
-                <div class="trust-item">
-                  <i class="bi bi-shield-check trust-icon"></i>
-                  <div class="trust-text">
-                    <strong>100% Secure</strong>
-                    <span>Your data is safe with us</span>
-                  </div>
-                </div>
-                <div class="divider-vertical"></div>
-                <div class="trust-item">
-                  <i class="bi bi-clock trust-icon"></i>
-                  <div class="trust-text">
-                    <strong>Quick Response</strong>
-                    <span>We respond within 15 mins</span>
-                  </div>
-                </div>
-                <div class="divider-vertical"></div>
-                <div class="trust-item">
-                  <i class="bi bi-currency-rupee trust-icon-circle"></i>
-                  <div class="trust-text">
-                    <strong>Best Price Guarantee</strong>
-                    <span>Get the most competitive rates</span>
-                  </div>
-                </div>
-                <div class="divider-vertical"></div>
-                <div class="trust-item">
-                  <i class="bi bi-headset trust-icon"></i>
-                  <div class="trust-text">
-                    <strong>24/7 Support</strong>
-                    <span>We are here to help</span>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Mobile Security Tag (Mobile Only, Inside the Card) -->
-              <div class="mobile-security-tag d-flex d-lg-none justify-content-center align-items-center gap-2 py-3">
-                <i class="bi bi-shield-check text-primary"></i>
-                <span>100% Secure. We never share your data.</span>
-              </div>
+            <!-- Phone Input with Floating Label -->
+            <div class="form-floating input-wrap-custom">
+              <input type="tel" name="phone" class="form-control form-control-custom" id="quote_phone" placeholder="Phone Number" required>
+              <label for="quote_phone">
+                <i class="bi bi-telephone-fill float-icon"></i> Phone Number
+              </label>
+            </div>
+            
+            <!-- Select Service with Floating Label -->
+            <div class="form-floating input-wrap-custom">
+              <select name="mtype" class="form-select form-select-custom" id="quote_service" aria-label="Select Service" required>
+                <option value="" disabled selected hidden></option>
+                <option value="Household Relocation">Household Relocation</option>
+                <option value="Office Relocation">Office Relocation</option>
+                <option value="Car Transportation">Car Transportation</option>
+                <option value="Bike Transportation">Bike Transportation</option>
+                <option value="Packing and Moving">Packing &amp; Moving</option>
+                <option value="Loading and Unloading">Loading &amp; Unloading</option>
+                <option value="Warehousing & Storage">Warehousing &amp; Storage</option>
+                <option value="Local City Shifting">Local City Moving</option>
+                <option value="Commercial Goods Transport">Commercial Goods Moving</option>
+              </select>
+              <label for="quote_service">
+                <i class="bi bi-box-seam-fill float-icon"></i> Select Service
+              </label>
             </div>
 
+            <!-- Moving Date with Floating Label -->
+            <div class="form-floating input-wrap-custom">
+              <input type="date" name="mdate" class="form-control form-control-custom" id="quote_date" value="<?= date('Y-m-d') ?>" min="<?= date('Y-m-d') ?>" required>
+              <label for="quote_date">
+                <i class="bi bi-calendar-event-fill float-icon"></i> Moving Date
+              </label>
+            </div>
+            
+            <!-- Moving From with Floating Label -->
+            <div class="form-floating input-wrap-custom">
+              <input type="text" name="mfrom" class="form-control form-control-custom" id="quote_from" value="<?= @$city ?>" placeholder="Moving From" required>
+              <label for="quote_from">
+                <i class="bi bi-geo-alt-fill float-icon"></i> Moving From
+              </label>
+            </div>
+            
+            <!-- Moving To with Floating Label -->
+            <div class="form-floating input-wrap-custom">
+              <input type="text" name="mto" class="form-control form-control-custom" id="quote_to" placeholder="Moving To" required>
+              <label for="quote_to">
+                <i class="bi bi-geo-alt-fill float-icon"></i> Moving To
+              </label>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit-custom" aria-label="Get Free Estimate Now">
+              <i class="bi bi-send-fill submit-btn-icon-desktop"></i>
+              <i class="bi bi-file-earmark-text-fill submit-btn-icon-mobile"></i>
+              <span>Get Free Quote</span>
+            </button>
           </div>
+          
+          <div id="quoteformresults"></div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
