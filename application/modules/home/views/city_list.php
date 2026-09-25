@@ -1,82 +1,87 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <?php
-$locations = [
-  
-
-    // Added from screenshot
-    ["city" => "Aurangabad", "state" => "maharashtra"],
-    ["city" => "Chandigarh", "state" => "chandigarh"],
-    ["city" => "Dhanbad", "state" => "jharkhand"],
-    ["city" => "Gwalior", "state" => "madhya-pradesh"],
-    ["city" => "Hyderabad", "state" => "telangana"],
-    ["city" => "Jodhpur", "state" => "rajasthan"],
-    ["city" => "Kota", "state" => "rajasthan"],
-    ["city" => "Meerut", "state" => "uttar-pradesh"],
-    ["city" => "Navi Mumbai", "state" => "maharashtra"],
-    ["city" => "Rajkot", "state" => "gujarat"],
-    ["city" => "Siliguri", "state" => "west-bengal"],
-    ["city" => "Vijayawada", "state" => "andhra-pradesh"],
-
-    ["city" => "Ahmedabad", "state" => "gujarat"],
-    ["city" => "Bangalore", "state" => "karnataka"],
-    ["city" => "Chennai", "state" => "tamil-nadu"],
-    ["city" => "Faridabad", "state" => "haryana"],
-    ["city" => "Gurugram", "state" => "haryana"],
-    ["city" => "Indore", "state" => "madhya-pradesh"],
-    ["city" => "Jamshedpur", "state" => "jharkhand"],
-    ["city" => "Mumbai", "state" => "maharashtra"],
-    ["city" => "Ranchi", "state" => "jharkhand"],
-    ["city" => "Surat", "state" => "gujarat"],
-    ["city" => "Visakhapatnam", "state" => "andhra-pradesh"],
-
-    ["city" => "Allahabad", "state" => "uttar-pradesh"],
-    ["city" => "Bareilly", "state" => "uttar-pradesh"],
-    ["city" => "Coimbatore", "state" => "tamil-nadu"],
-    ["city" => "Ghaziabad", "state" => "uttar-pradesh"],
-    ["city" => "Howrah", "state" => "west-bengal"],
-    ["city" => "Jabalpur", "state" => "madhya-pradesh"],
-    ["city" => "Ludhiana", "state" => "punjab"],
-    ["city" => "Nagpur", "state" => "maharashtra"],
-    ["city" => "Pune", "state" => "maharashtra"],
-    ["city" => "Solapur", "state" => "maharashtra"],
-    ["city" => "Vadodara", "state" => "gujarat"],
-
-    ["city" => "Amritsar", "state" => "punjab"],
-    ["city" => "Bhopal", "state" => "madhya-pradesh"],
-    ["city" => "Delhi", "state" => "delhi"],
-    ["city" => "Hubli-Dharwad", "state" => "karnataka"],
-    ["city" => "Jaipur", "state" => "rajasthan"],
-    ["city" => "Kolkata", "state" => "west-bengal"],
-    ["city" => "Madurai", "state" => "tamil-nadu"],
-    ["city" => "Nashik", "state" => "maharashtra"],
-    ["city" => "Raipur", "state" => "chhattisgarh"],
-    ["city" => "Srinagar", "state" => "jammu-and-kashmir"],
+/**
+ * Service Locations Section (Targeting Key Cities)
+ * Displays only the requested cities with direct landing links.
+ */
+$cities = [
+    [
+        'title' => 'V Move Packers and Movers in Ambernath',
+        'city'  => 'Ambernath',
+        'state' => 'maharashtra',
+        'slug'  => 'ambernath-packers-movers-maharashtra'
+    ],
+    [
+        'title' => 'V Move Packers and Movers in Ghatkopar',
+        'city'  => 'Ghatkopar',
+        'state' => 'maharashtra',
+        'slug'  => 'ghatkopar-packers-movers-maharashtra'
+    ],
+    [
+        'title' => 'V Move Packers and Movers in Badlapur',
+        'city'  => 'Badlapur',
+        'state' => 'maharashtra',
+        'slug'  => 'badlapur-packers-movers-maharashtra'
+    ],
+    [
+        'title' => 'V Move Packers and Movers in Kharghar',
+        'city'  => 'Kharghar',
+        'state' => 'maharashtra',
+        'slug'  => 'kharghar-packers-movers-maharashtra'
+    ],
+    [
+        'title' => 'V Move Packers and Movers in Palava City (Dombivli)',
+        'city'  => 'Palava City (Dombivli)',
+        'state' => 'maharashtra',
+        'slug'  => 'palava-city-dombivli-packers-movers-maharashtra'
+    ],
 ];
 ?>
 
-<section class="search-location-section py-5">
+<!-- ==========================================================================
+     SERVICE LOCATIONS SECTION (Targeting: 5 Primary Cities)
+     ========================================================================== -->
+<section class="home-section city-locations-section" id="service-locations" aria-label="Our Service Locations">
     <div class="container">
-
-        <div class="location-heading mb-4">
-            <h2 class="h5 fw-bold mb-0">Search By Location</h2>
+        
+        <!-- Section Header -->
+        <div class="sec-header text-center">
+            <div class="sec-badge">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>SERVICE LOCATIONS</span>
+            </div>
+            <h2 class="sec-title">
+                Locations &amp; Cities <span class="sec-title-accent">We Serve</span>
+            </h2>
+            <div class="sec-divider">
+                <span class="sec-divider-line"></span>
+                <span class="sec-divider-icon"><i class="bi bi-geo-alt"></i></span>
+                <span class="sec-divider-line"></span>
+            </div>
+            <p class="sec-subtitle">
+                Looking for verified shifting nearby? Explore top locations served by <strong>V Move Packers and Movers</strong> with fast door-to-door transit and 100% care.
+            </p>
         </div>
 
-        <div class="row g-3">
-            <?php foreach ($locations as $location): 
-                $citySlug = strtolower(str_replace(' ', '-', $location['city']));
-                $link = $citySlug . "-packers-movers-" . $location['state'];
-            ?>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                    <ul class="location-list mb-0">
-                        <li>
-                            <a href="<?= site_url($link) ?>" aria-label="Packers and Movers in <?= $location['city'] ?>">
-                                Packers &amp; Movers <?= $location['city'] ?>
-                            </a>
-                        </li>
-                    </ul>
+        <!-- 5 Cities Grid -->
+        <div class="row g-3 justify-content-center">
+            <?php foreach ($cities as $loc): ?>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="<?= site_url($loc['slug']) ?>" class="city-loc-card" aria-label="<?= htmlspecialchars($loc['title']) ?>">
+                        <div class="city-loc-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="city-loc-info">
+                            <h3 class="city-loc-title"><?= htmlspecialchars($loc['title']) ?></h3>
+                            <span class="city-loc-tag">Safe Relocation &amp; Transport</span>
+                        </div>
+                        <div class="city-loc-arrow">
+                            <i class="bi bi-arrow-right-short"></i>
+                        </div>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
 
     </div>
 </section>
-

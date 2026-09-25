@@ -35,12 +35,12 @@ $city = $city ?? ($comp['addressRegion'] ?? 'India');
 
           <!-- Main Heading -->
           <h1 class="hero-title">
-            India's Trusted <span class="hero-text-accent">Packers &amp; Movers</span> For Hassle-Free Relocation
+            Ambernath's Trusted <span class="hero-text-accent">Packers &amp; Movers</span> For Hassle-Free Relocation
           </h1>
 
           <!-- Subtitle / Value Proposition -->
           <p class="hero-subtitle">
-            Safe household shifting, corporate office relocation, and nationwide cargo transit with 100% transit insurance and verified moving crews.
+            Safe household shifting, corporate office relocation, and nationwide vehicle transit across Ambernath with 100% transit insurance and verified moving crews.
           </p>
 
           <!-- Value Highlights / Feature Chips -->
