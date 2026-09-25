@@ -4562,3 +4562,616 @@
   }
 }
 
+
+/* --------------------------------------------------------------------------
+   1. General Service Section Containers & Utilities
+   -------------------------------------------------------------------------- */
+.service-section {
+  padding: 4.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-section-sm {
+  padding: 3rem 0;
+}
+
+.service-bg-surface {
+  background-color: var(--nav-surface);
+}
+
+/* --------------------------------------------------------------------------
+   2. Typography & Header Components
+   -------------------------------------------------------------------------- */
+.service-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 10%, var(--nav-light));
+  color: var(--nav-primary);
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 25%, transparent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.38rem 0.95rem;
+  border-radius: 50rem;
+  margin-bottom: 1rem;
+}
+
+.service-pill-badge-light {
+  background-color: color-mix(in srgb, var(--nav-light) 15%, transparent);
+  color: var(--nav-light);
+  border-color: color-mix(in srgb, var(--nav-light) 30%, transparent);
+}
+
+.service-title-lg {
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--nav-dark);
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.service-title-lg span {
+  color: var(--nav-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.service-title-md {
+  font-size: clamp(1.5rem, 2.6vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--nav-dark);
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.015em;
+}
+
+.service-title-md span {
+  color: var(--nav-primary);
+}
+
+.service-desc {
+  font-size: 1.025rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--nav-dark) 78%, transparent);
+  margin-bottom: 1.25rem;
+}
+
+.service-desc-lead {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--nav-dark) 88%, transparent);
+}
+
+.service-section-header {
+  max-width: 760px;
+  margin: 0 auto 3rem auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. Service Buttons (Themed with Brand Colors, Base styles from Bootstrap .btn)
+   -------------------------------------------------------------------------- */
+.btn-service-primary {
+  background-color: var(--nav-primary);
+  border-color: var(--nav-primary);
+  color: var(--nav-light) !important;
+  padding: 0.8rem 1.6rem;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--nav-primary) 30%, transparent);
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-service-primary:hover,
+.btn-service-primary:focus {
+  background-color: var(--nav-primary-hover);
+  border-color: var(--nav-primary-hover);
+  color: var(--nav-light) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--nav-primary) 40%, transparent);
+}
+
+.btn-service-outline {
+  background-color: transparent;
+  color: var(--nav-primary);
+  border: 1.5px solid var(--nav-primary);
+  padding: 0.775rem 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.btn-service-outline:hover,
+.btn-service-outline:focus {
+  background-color: color-mix(in srgb, var(--nav-primary) 8%, transparent);
+  color: var(--nav-primary-hover);
+  border-color: var(--nav-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero Highlights Box & Service Checklist
+   -------------------------------------------------------------------------- */
+
+.service-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.service-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--nav-dark) 85%, transparent);
+  line-height: 1.5;
+}
+
+.service-checklist li i {
+  color: var(--nav-primary);
+  font-size: 1.15rem;
+  margin-top: 0.05rem;
+  flex-shrink: 0;
+}
+
+.service-hero-highlight-box {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.15rem;
+  padding: 2rem;
+  box-shadow: 0 15px 35px color-mix(in srgb, var(--nav-dark) 6%, transparent);
+  position: relative;
+}
+
+.service-hero-highlight-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  border-radius: 1.15rem 1.15rem 0 0;
+}
+
+.service-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: color-mix(in srgb, #ffc107 15%, var(--nav-light));
+  color: #946c00;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 50rem;
+  border: 1px solid color-mix(in srgb, #ffc107 35%, transparent);
+}
+
+.service-feature-mini-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 0.65rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 8%, var(--nav-surface));
+  color: var(--nav-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 18%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   5. Key Stats Counter Strip
+   -------------------------------------------------------------------------- */
+.service-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.service-stat-box {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 0.85rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-stat-box:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--nav-primary) 35%, transparent);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--nav-dark) 6%, transparent);
+}
+
+.service-stat-icon {
+  font-size: 2rem;
+  color: var(--nav-primary);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.service-stat-number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.service-stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--nav-dark) 70%, transparent);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. 5-Layer Defensive Packing Breakdown
+   -------------------------------------------------------------------------- */
+.service-layers-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.15rem;
+}
+
+.service-layer-box {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 0.9rem;
+  padding: 1.25rem;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-layer-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--nav-primary);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--nav-primary) 12%, transparent);
+}
+
+.service-layer-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--nav-primary) 10%, var(--nav-surface));
+  color: var(--nav-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 20%, transparent);
+  flex-shrink: 0;
+}
+
+.service-layer-num {
+  margin-left: auto;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--nav-primary) 10%, transparent);
+  color: var(--nav-primary);
+  font-size: 0.725rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. 5-Step Relocation Process Flow
+   -------------------------------------------------------------------------- */
+.service-process-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  position: relative;
+}
+
+.service-process-card {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1rem;
+  padding: 1.35rem 1.2rem;
+  position: relative;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-process-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--nav-primary) 40%, transparent);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--nav-dark) 7%, transparent);
+}
+
+.service-process-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50rem;
+  background-color: var(--nav-primary);
+  color: var(--nav-light);
+  font-weight: 800;
+  font-size: 0.825rem;
+  margin-bottom: 0;
+  box-shadow: 0 3px 8px color-mix(in srgb, var(--nav-primary) 30%, transparent);
+  flex-shrink: 0;
+}
+
+.service-process-icon-wrap {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 8%, var(--nav-surface));
+  color: var(--nav-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 18%, transparent);
+  flex-shrink: 0;
+}
+
+.service-process-icon {
+  font-size: 1.15rem;
+  color: var(--nav-primary);
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. Value Advantage Cards (Why Choose Us for Home Moving)
+   -------------------------------------------------------------------------- */
+.service-advantage-card {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1rem;
+  padding: 1.85rem 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.service-advantage-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--nav-primary) 35%, transparent);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--nav-dark) 6%, transparent);
+}
+
+.service-advantage-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--nav-primary) 10%, var(--nav-surface));
+  color: var(--nav-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 20%, transparent);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.service-advantage-card:hover .service-advantage-icon {
+  background-color: var(--nav-primary);
+  color: var(--nav-light);
+}
+
+/* --------------------------------------------------------------------------
+   9. FAQ Accordion Styled with Brand Variables
+   -------------------------------------------------------------------------- */
+.service-accordion {
+  border-radius: 0.85rem;
+  overflow: hidden;
+}
+
+.service-accordion .accordion-item {
+  border: 1px solid var(--nav-border);
+  background-color: var(--nav-light);
+  margin-bottom: 0.85rem;
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+}
+
+.service-accordion .accordion-button {
+  background-color: var(--nav-light);
+  color: var(--nav-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1.2rem 1.35rem;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.service-accordion .accordion-button:not(.collapsed) {
+  background-color: color-mix(in srgb, var(--nav-primary) 6%, var(--nav-light));
+  color: var(--nav-primary);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.service-accordion .accordion-button::after {
+  filter: grayscale(1);
+  transition: transform 0.2s ease;
+}
+
+.service-accordion .accordion-button:not(.collapsed)::after {
+  filter: none;
+}
+
+.service-accordion .accordion-body {
+  padding: 1.25rem 1.35rem;
+  font-size: 0.925rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--nav-dark) 78%, transparent);
+  background-color: var(--nav-light);
+}
+
+/* --------------------------------------------------------------------------
+   10. High-Converting Bottom CTA Card
+   -------------------------------------------------------------------------- */
+.service-cta-card {
+  background: linear-gradient(135deg, var(--nav-dark) 0%, color-mix(in srgb, var(--nav-dark) 85%, var(--nav-primary)) 100%);
+  border: 1px solid color-mix(in srgb, var(--nav-light) 12%, transparent);
+  border-radius: 1.25rem;
+  padding: 3.5rem 2.5rem;
+  color: var(--nav-light);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 45px color-mix(in srgb, var(--nav-dark) 25%, transparent);
+}
+
+.service-cta-card::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--nav-primary) 40%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.service-cta-title {
+  font-size: clamp(1.75rem, 3.2vw, 2.45rem);
+  font-weight: 800;
+  color: var(--nav-light);
+  margin-bottom: 0.85rem;
+}
+
+.service-cta-title span {
+  color: #ff94a5;
+}
+
+.service-cta-desc {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 650px;
+}
+
+.service-cta-feature-box {
+  background: color-mix(in srgb, var(--nav-light) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--nav-light) 15%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   11. Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .service-layers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-process-timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .service-section {
+    padding: 3.5rem 0;
+  }
+  
+  .service-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .service-process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-layers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-hero-highlight-box {
+    margin-top: 2rem;
+  }
+
+  .service-cta-card {
+    padding: 2.5rem 1.75rem;
+    text-align: center;
+  }
+
+  .service-cta-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .service-section {
+    padding: 2.75rem 0;
+  }
+
+  .service-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .service-stat-box {
+    padding: 1.15rem 0.75rem;
+  }
+
+  .service-stat-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .service-stat-number {
+    font-size: 1.45rem;
+  }
+
+  .service-stat-label {
+    font-size: 0.785rem;
+  }
+
+  .service-process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .service-layers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.55rem;
+  }
+
+  .service-stat-box {
+    padding: 1rem 0.5rem;
+  }
+
+  .service-stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .service-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .service-stat-label {
+    font-size: 0.725rem;
+    line-height: 1.3;
+  }
+}
+
+
