@@ -16,10 +16,11 @@ class Blog extends MX_Controller {
 
     private function loadBlogs() {
         try {
-            if (isset($this->db) && $this->db->conn_id) {
-                if ($this->db->table_exists('blog')) {
-                    $this->db->order_by('b_id', 'DESC');
-                    $query = $this->db->get('blog');
+            $CI =& get_instance();
+            if (isset($CI->db) && is_object($CI->db) && !empty($CI->db->conn_id)) {
+                if ($CI->db->table_exists('blog')) {
+                    $CI->db->order_by('b_id', 'DESC');
+                    $query = $CI->db->get('blog');
                     if ($query && $query->num_rows() > 0) {
                         return $query->result_array();
                     }
@@ -29,10 +30,6 @@ class Blog extends MX_Controller {
             // Database missing or connection error
         }
         
-        $path = FCPATH . 'admin_data/blogs.json';
-        if (file_exists($path)) {
-            return json_decode(file_get_contents($path), true) ?: [];
-        }
         return [];
     }
 
@@ -79,10 +76,8 @@ class Blog extends MX_Controller {
         $data['total'] = $total_rows;
         $data['recent_posts'] = array_slice($all_blogs, 0, 5);
 
-        $company_name = $this->comp['company3'];
-        $data['company_name'] = $company_name;
-        $data['title'] = "Relocation Tips, Shifting Guides & Moving News | " . $company_name;
-        $data['description'] = "Stay updated with expert house shifting tips, vehicle transport guides, packing checklists, and logistics insights on the official blog of " . $company_name . ".";
+        $data['title'] = "Packing & Moving Tips, Guides & News | " . $this->comp['company3'];
+        $data['description'] = "Read expert relocation advice, house shifting tips, vehicle moving guides, and industry updates on the official blog of " . $this->comp['company3'] . ".";
         $data['module'] = "blog";
         $data['view_file'] = "blog"; 
 
@@ -116,12 +111,8 @@ class Blog extends MX_Controller {
             $data['query'] = [$selected_blog];
             $data['recent_posts'] = array_slice($all_blogs, 0, 5);
             
-            $company_name = $this->comp['company3'];
-            $data['company_name'] = $company_name;
-            $data['title'] = ucfirst($selected_blog->title) . " | " . $company_name;
-            $raw_desc = strip_tags($selected_blog->description ?? '');
-            $clean_desc = trim(preg_replace('/\s+/', ' ', $raw_desc));
-            $data['description'] = !empty($clean_desc) ? character_limiter($clean_desc, 155) : "Read our moving guide on " . ucfirst($selected_blog->title) . " by " . $company_name . ".";
+            $data['title'] = ucfirst($selected_blog->title) . " | " . $this->comp['company3'];
+            $data['description'] = word_limiter(strip_tags($selected_blog->description ?? ''), 150);
             
             $image_file = $selected_blog->image ?? '';
             if ($image_file && file_exists(FCPATH . 'assets/uploads/blog/' . $image_file)) {

@@ -5174,4 +5174,1126 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   1. Section Wrappers & Layout
+   -------------------------------------------------------------------------- */
+.cnt-section {
+  padding: 4.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cnt-section-sm {
+  padding: 3.25rem 0;
+}
+
+.cnt-bg-surface {
+  background-color: var(--nav-surface);
+}
+
+.cnt-bg-white {
+  background-color: var(--nav-light);
+}
+
+/* --------------------------------------------------------------------------
+   2. Typography, Badges & Section Headers
+   -------------------------------------------------------------------------- */
+.cnt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 10%, var(--nav-light));
+  color: var(--nav-primary);
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 22%, transparent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.38rem 0.95rem;
+  border-radius: 50rem;
+  margin-bottom: 0.85rem;
+}
+
+.cnt-badge-light {
+  background-color: color-mix(in srgb, var(--nav-light) 15%, transparent);
+  color: var(--nav-light);
+  border-color: color-mix(in srgb, var(--nav-light) 30%, transparent);
+}
+
+.cnt-section-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--nav-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+}
+
+.cnt-section-title span {
+  color: var(--nav-primary);
+}
+
+.cnt-section-desc {
+  font-size: 1.025rem;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--nav-dark) 75%, transparent);
+  max-width: 720px;
+  margin: 0 auto 2.5rem auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. Main Contact Form Card
+   -------------------------------------------------------------------------- */
+.cnt-form-card {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.35rem;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--nav-dark) 6%, transparent);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.cnt-form-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  border-radius: 1.35rem 1.35rem 0 0;
+}
+
+.cnt-form-header {
+  margin-bottom: 1.75rem;
+}
+
+.cnt-form-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  letter-spacing: -0.015em;
+  margin-bottom: 0.45rem;
+}
+
+.cnt-form-title span {
+  color: var(--nav-primary);
+}
+
+.cnt-form-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--nav-dark) 72%, transparent);
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Floating Input Fields with Custom Icons & Pill Styling
+   -------------------------------------------------------------------------- */
+.cnt-floating-wrap {
+  position: relative;
+}
+
+.cnt-floating-wrap.has-icon .cnt-field-icon {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.15rem;
+  color: color-mix(in srgb, var(--nav-dark) 48%, transparent);
+  transition: color 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.cnt-floating-wrap.has-icon.is-textarea .cnt-field-icon {
+  top: 1.4rem;
+  transform: none;
+}
+
+.cnt-floating-wrap.has-icon .cnt-pill-control {
+  padding-left: 3.15rem !important;
+}
+
+.cnt-floating-wrap.has-icon label {
+  left: 3.15rem !important;
+  color: color-mix(in srgb, var(--nav-dark) 55%, transparent);
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.cnt-pill-control {
+  border-radius: 50rem !important;
+  border: 1.5px solid var(--nav-border) !important;
+  background-color: var(--nav-light) !important;
+  color: var(--nav-dark) !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  height: calc(3.45rem + 2px) !important;
+  line-height: 1.25 !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
+}
+
+.cnt-pill-control::placeholder {
+  color: transparent !important;
+}
+
+.cnt-pill-control:focus {
+  border-color: var(--nav-primary) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--nav-primary) 18%, transparent) !important;
+  background-color: var(--nav-light) !important;
+}
+
+.cnt-floating-wrap:focus-within .cnt-field-icon {
+  color: var(--nav-primary);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.cnt-floating-wrap.is-textarea:focus-within .cnt-field-icon {
+  transform: scale(1.08);
+}
+
+.cnt-pill-textarea {
+  border-radius: 1.25rem !important;
+  min-height: 125px !important;
+  height: auto !important;
+  padding-top: 1.75rem !important;
+  resize: vertical;
+}
+
+/* --------------------------------------------------------------------------
+   5. Pill Action Buttons (Submit & Clear)
+   -------------------------------------------------------------------------- */
+.cnt-submit-wrap {
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cnt-pill-submit-btn {
+  background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  color: var(--nav-light) !important;
+  border: none;
+  border-radius: 50rem;
+  padding: 0.85rem 2.25rem;
+  font-size: 0.925rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  box-shadow: 0 5px 18px color-mix(in srgb, var(--nav-primary) 35%, transparent);
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.cnt-pill-submit-btn:hover,
+.cnt-pill-submit-btn:focus {
+  background: linear-gradient(135deg, var(--nav-primary-hover) 0%, #5d020d 100%);
+  color: var(--nav-light) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--nav-primary) 45%, transparent);
+}
+
+.cnt-pill-clear-btn {
+  background-color: transparent;
+  color: color-mix(in srgb, var(--nav-dark) 65%, transparent);
+  border: 1.5px solid var(--nav-border);
+  border-radius: 50rem;
+  padding: 0.825rem 1.65rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.cnt-pill-clear-btn:hover,
+.cnt-pill-clear-btn:focus {
+  background-color: var(--nav-surface);
+  color: var(--nav-dark);
+  border-color: color-mix(in srgb, var(--nav-dark) 35%, transparent);
+  transform: translateY(-1px);
+}
+
+.cnt-form-trust-note {
+  font-size: 0.825rem;
+  color: color-mix(in srgb, var(--nav-dark) 60%, transparent);
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   6. Contact Info Cards (Sidebar)
+   -------------------------------------------------------------------------- */
+.cnt-info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.cnt-info-card {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.15rem;
+  padding: 1.45rem 1.35rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.cnt-info-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--nav-primary) 35%, transparent);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--nav-dark) 6%, transparent);
+}
+
+.cnt-info-icon-wrap {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.85rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 8%, var(--nav-surface));
+  color: var(--nav-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 20%, transparent);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.cnt-info-card:hover .cnt-info-icon-wrap {
+  background-color: var(--nav-primary);
+  color: var(--nav-light);
+  border-color: var(--nav-primary);
+}
+
+.cnt-info-title {
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--nav-dark) 60%, transparent);
+  margin-bottom: 0.25rem;
+}
+
+.cnt-info-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--nav-dark);
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+  text-decoration: none;
+  display: block;
+}
+
+.cnt-info-desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--nav-dark) 72%, transparent);
+  margin-bottom: 0.75rem;
+}
+
+.cnt-card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--nav-primary);
+  text-decoration: none;
+  padding: 0.35rem 0.85rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 8%, transparent);
+  border-radius: 50rem;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 22%, transparent);
+  transition: all 0.2s ease;
+}
+
+.cnt-card-action-btn:hover {
+  background-color: var(--nav-primary);
+  color: var(--nav-light);
+}
+
+.cnt-card-action-btn.cnt-wa-btn {
+  color: #198754;
+  background-color: rgba(25, 135, 84, 0.1);
+  border-color: rgba(25, 135, 84, 0.25);
+}
+
+.cnt-card-action-btn.cnt-wa-btn:hover {
+  background-color: #198754;
+  color: #ffffff;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. Interactive Map Container & Floating Detail Box
+   -------------------------------------------------------------------------- */
+.cnt-map-wrapper {
+  position: relative;
+  border-radius: 1.35rem;
+  overflow: hidden;
+  border: 1px solid var(--nav-border);
+  box-shadow: 0 12px 35px color-mix(in srgb, var(--nav-dark) 6%, transparent);
+  background-color: var(--nav-surface);
+}
+
+.cnt-map-iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  display: block;
+}
+
+.cnt-map-floating-box {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  max-width: 380px;
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1rem;
+  padding: 1.35rem;
+  box-shadow: 0 15px 35px color-mix(in srgb, var(--nav-dark) 12%, transparent);
+  z-index: 10;
+}
+
+/* --------------------------------------------------------------------------
+   10. Contact FAQs Accordion
+   -------------------------------------------------------------------------- */
+.cnt-accordion {
+  border-radius: 0.85rem;
+  overflow: hidden;
+}
+
+.cnt-accordion .accordion-item {
+  border: 1px solid var(--nav-border);
+  background-color: var(--nav-light);
+  margin-bottom: 0.85rem;
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+}
+
+.cnt-accordion .accordion-button {
+  background-color: var(--nav-light);
+  color: var(--nav-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1.15rem 1.35rem;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.cnt-accordion .accordion-button:not(.collapsed) {
+  background-color: color-mix(in srgb, var(--nav-primary) 6%, var(--nav-light));
+  color: var(--nav-primary);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.cnt-accordion .accordion-button::after {
+  filter: grayscale(1);
+  transition: transform 0.2s ease;
+}
+
+.cnt-accordion .accordion-button:not(.collapsed)::after {
+  filter: none;
+}
+
+.cnt-accordion .accordion-body {
+  padding: 1.25rem 1.35rem;
+  font-size: 0.925rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--nav-dark) 78%, transparent);
+  background-color: var(--nav-light);
+}
+
+/* --------------------------------------------------------------------------
+   11. Emergency Relocation CTA Banner
+   -------------------------------------------------------------------------- */
+.cnt-cta-card {
+  background: linear-gradient(135deg, var(--nav-dark) 0%, color-mix(in srgb, var(--nav-dark) 85%, var(--nav-primary)) 100%);
+  border: 1px solid color-mix(in srgb, var(--nav-light) 12%, transparent);
+  border-radius: 1.25rem;
+  padding: 3.5rem 2.5rem;
+  color: var(--nav-light);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 45px color-mix(in srgb, var(--nav-dark) 25%, transparent);
+}
+
+.cnt-cta-card::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--nav-primary) 40%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cnt-cta-title {
+  font-size: clamp(1.75rem, 3.2vw, 2.45rem);
+  font-weight: 800;
+  color: var(--nav-light);
+  margin-bottom: 0.85rem;
+}
+
+.cnt-cta-title span {
+  color: #ff94a5;
+}
+
+.cnt-cta-desc {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* --------------------------------------------------------------------------
+   12. Responsive Media Queries
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+  .cnt-section {
+    padding: 3.5rem 0;
+  }
+  
+  .cnt-form-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .cnt-info-sidebar {
+    margin-top: 2rem;
+  }
+  
+
+  .cnt-map-floating-box {
+    position: static;
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 0.95rem;
+  }
+  
+  .cnt-cta-card {
+    padding: 2.5rem 1.75rem;
+    text-align: center;
+  }
+  
+  .cnt-cta-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cnt-section {
+    padding: 2.75rem 0;
+  }
+  
+  .cnt-form-card {
+    padding: 1.65rem 1.15rem;
+    border-radius: 1.15rem;
+  }
+  
+  .cnt-form-title {
+    font-size: 1.45rem;
+  }
+  
+  .cnt-submit-wrap {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem !important;
+  }
+  
+  .cnt-pill-submit-btn,
+  .cnt-pill-clear-btn {
+    width: 100%;
+  }
+
+  .cnt-map-iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cnt-info-card {
+    padding: 1.15rem 1rem;
+  }
+  
+  .cnt-info-icon-wrap {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 1.15rem;
+  }
+}
+
+/* ==========================================================================
+   Blog Module Styles (Listing, Single Post Details, Sidebar, Widgets)
+   Theme Variables from style.css:
+   --nav-primary       : #940111
+   --nav-primary-hover : #78192a
+   --nav-dark          : #12151b
+   --nav-light         : #ffffff
+   --nav-surface       : #f8f9fa
+   --nav-border        : #e9ecef
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Blog Section & Layout Wrappers
+   -------------------------------------------------------------------------- */
+.blog-section {
+  padding: 4.5rem 0;
+  background-color: var(--nav-surface);
+  position: relative;
+}
+
+.blog-details-section {
+  padding: 4rem 0;
+  background-color: var(--nav-surface);
+  position: relative;
+}
+
+.blog-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 10%, var(--nav-light));
+  color: var(--nav-primary);
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 22%, transparent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.38rem 0.95rem;
+  border-radius: 50rem;
+  margin-bottom: 0.85rem;
+}
+
+.blog-title-highlight {
+  color: var(--nav-primary);
+  position: relative;
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   2. Blog Listing Cards
+   -------------------------------------------------------------------------- */
+.blog-card {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border) !important;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--nav-dark) 5%, transparent);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--nav-primary) 35%, transparent) !important;
+  box-shadow: 0 16px 36px color-mix(in srgb, var(--nav-dark) 10%, transparent);
+}
+
+.blog-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  background-color: color-mix(in srgb, var(--nav-dark) 6%, var(--nav-surface));
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.blog-card:hover .blog-card-img {
+  transform: scale(1.06);
+}
+
+.blog-date-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  color: var(--nav-light);
+  font-size: 0.785rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50rem;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--nav-primary) 35%, transparent);
+  z-index: 2;
+  letter-spacing: 0.02em;
+}
+
+.blog-card-body {
+  padding: 1.65rem 1.5rem;
+}
+
+.blog-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.825rem;
+  color: color-mix(in srgb, var(--nav-dark) 60%, transparent);
+  margin-bottom: 0.85rem;
+}
+
+.blog-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.blog-icon-primary {
+  color: var(--nav-primary);
+}
+
+.blog-title-link {
+  color: var(--nav-dark);
+  text-decoration: none;
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-title-link:hover {
+  color: var(--nav-primary);
+}
+
+.blog-card-excerpt {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--nav-dark) 70%, transparent);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-btn-primary {
+  background-color: color-mix(in srgb, var(--nav-primary) 8%, var(--nav-surface));
+  color: var(--nav-primary) !important;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 22%, transparent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.45rem 1.15rem;
+  border-radius: 50rem;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.blog-btn-primary:hover,
+.blog-btn-primary:focus {
+  background-color: var(--nav-primary);
+  color: var(--nav-light) !important;
+  border-color: var(--nav-primary);
+  transform: translateX(3px);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--nav-primary) 30%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   3. Blog Single Post Details
+   -------------------------------------------------------------------------- */
+.blog-details-card {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.35rem;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--nav-dark) 5%, transparent);
+}
+
+.blog-details-img-wrap {
+  border-radius: 1.15rem;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  background-color: color-mix(in srgb, var(--nav-dark) 6%, var(--nav-surface));
+  border: 1px solid var(--nav-border);
+  max-height: 420px;
+}
+
+.blog-details-img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--nav-border);
+  margin-bottom: 1.5rem;
+}
+
+.blog-details-title {
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 800;
+  color: var(--nav-dark);
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.35rem;
+}
+
+.blog-content-wrapper {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: color-mix(in srgb, var(--nav-dark) 80%, transparent);
+}
+
+.blog-content-wrapper p {
+  margin-bottom: 1.35rem;
+}
+
+.blog-content-wrapper h2,
+.blog-content-wrapper h3,
+.blog-content-wrapper h4 {
+  color: var(--nav-dark);
+  font-weight: 800;
+  margin-top: 1.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.blog-content-wrapper blockquote {
+  border-left: 4px solid var(--nav-primary);
+  background-color: color-mix(in srgb, var(--nav-primary) 5%, var(--nav-surface));
+  padding: 1.15rem 1.45rem;
+  border-radius: 0 0.85rem 0.85rem 0;
+  font-style: italic;
+  margin: 1.5rem 0;
+  color: var(--nav-dark);
+}
+
+.blog-btn-share {
+  background-color: color-mix(in srgb, var(--nav-primary) 8%, var(--nav-surface));
+  color: var(--nav-primary);
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 22%, transparent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.45rem 1.15rem;
+  border-radius: 50rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.blog-btn-share:hover {
+  background-color: var(--nav-primary);
+  color: var(--nav-light);
+  border-color: var(--nav-primary);
+}
+
+/* --------------------------------------------------------------------------
+   4. Blog Sidebar & Widgets
+   -------------------------------------------------------------------------- */
+.blog-sidebar-sticky {
+  position: sticky;
+  top: 110px;
+  z-index: 10;
+}
+
+.blog-widget {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.25rem;
+  padding: 1.85rem 1.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--nav-dark) 4%, transparent);
+}
+
+.blog-widget-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid color-mix(in srgb, var(--nav-primary) 25%, transparent);
+  position: relative;
+}
+
+.blog-widget-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 45px;
+  height: 2px;
+  background-color: var(--nav-primary);
+}
+
+.blog-recent-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--nav-border) 60%, transparent);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.blog-recent-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blog-recent-img {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 1px solid var(--nav-border);
+  transition: transform 0.25s ease;
+}
+
+.blog-recent-item:hover .blog-recent-img {
+  transform: scale(1.05);
+}
+
+.blog-recent-title {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--nav-dark);
+  line-height: 1.35;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-recent-item:hover .blog-recent-title {
+  color: var(--nav-primary);
+}
+
+.blog-recent-date {
+  font-size: 0.785rem;
+  color: color-mix(in srgb, var(--nav-dark) 55%, transparent);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   5. Need Moving Help? Sidebar CTA Box
+   -------------------------------------------------------------------------- */
+.blog-cta-widget {
+  background: linear-gradient(135deg, var(--nav-dark) 0%, color-mix(in srgb, var(--nav-dark) 85%, var(--nav-primary)) 100%);
+  color: var(--nav-light);
+  border-radius: 1.25rem;
+  padding: 2.25rem 1.65rem;
+  text-align: center;
+  border: 1px solid color-mix(in srgb, var(--nav-light) 12%, transparent);
+  box-shadow: 0 14px 35px color-mix(in srgb, var(--nav-dark) 18%, transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-cta-widget::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--nav-primary) 50%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.blog-cta-icon-box {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 1.15rem auto;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--nav-primary) 35%, transparent);
+  color: #ff94a5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  border: 1px solid color-mix(in srgb, #ff94a5, 30%, transparent);
+}
+
+.blog-cta-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--nav-light);
+  margin-bottom: 0.5rem;
+}
+
+.blog-cta-desc {
+  font-size: 0.885rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.35rem;
+}
+
+.blog-btn-quote {
+  background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  color: var(--nav-light) !important;
+  font-weight: 700;
+  font-size: 0.925rem;
+  border: none;
+  border-radius: 50rem;
+  padding: 0.8rem 1.65rem;
+  width: 100%;
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--nav-primary) 40%, transparent);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.blog-btn-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--nav-primary) 55%, transparent);
+  background: linear-gradient(135deg, var(--nav-primary-hover) 0%, #5d020d 100%);
+}
+
+/* --------------------------------------------------------------------------
+   6. Social Share Modal Buttons
+   -------------------------------------------------------------------------- */
+.blog-bg-fb {
+  background-color: #1877f2 !important;
+  border: none;
+}
+.blog-bg-fb:hover {
+  background-color: #166fe5 !important;
+}
+
+.blog-bg-tw {
+  background-color: #111111 !important;
+  border: none;
+}
+.blog-bg-tw:hover {
+  background-color: #000000 !important;
+}
+
+.blog-bg-wa {
+  background-color: #25d366 !important;
+  border: none;
+}
+.blog-bg-wa:hover {
+  background-color: #20bd5a !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. Styled Pagination
+   -------------------------------------------------------------------------- */
+.styled-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.styled-pagination li a,
+.styled-pagination li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 0.85rem;
+  border-radius: 0.65rem;
+  background-color: var(--nav-light);
+  color: var(--nav-dark);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: 1px solid var(--nav-border);
+  transition: all 0.2s ease;
+}
+
+.styled-pagination li a:hover {
+  background-color: color-mix(in srgb, var(--nav-primary) 8%, var(--nav-surface));
+  color: var(--nav-primary);
+  border-color: var(--nav-primary);
+  transform: translateY(-2px);
+}
+
+.styled-pagination li a.active {
+  background-color: var(--nav-primary) !important;
+  color: var(--nav-light) !important;
+  border-color: var(--nav-primary) !important;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--nav-primary) 30%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   8. Blog Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .blog-section,
+  .blog-details-section {
+    padding: 3.25rem 0;
+  }
+  
+  .blog-details-card {
+    padding: 1.85rem 1.45rem;
+    margin-bottom: 2rem;
+  }
+  
+  .blog-sidebar-sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-section,
+  .blog-details-section {
+    padding: 2.75rem 0;
+  }
+  
+  .blog-card-img-wrap {
+    height: 190px;
+  }
+  
+  .blog-details-title {
+    font-size: 1.45rem;
+  }
+  
+  .blog-details-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
 

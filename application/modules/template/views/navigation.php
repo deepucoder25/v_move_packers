@@ -280,12 +280,74 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
             </ul>
           </li>
 
-          <!-- Our Branches -->
-          <li class="nav-item">
-            <a class="nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>" href="<?= site_url('our-branches') ?>">
+          <!-- Service Areas Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle <?= $active_tab === 'locations' ? 'active' : '' ?>" href="<?= site_url('our-branches') ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-geo-alt"></i>
-              <span>Our Branches</span>
+              <span>Service Areas</span>
             </a>
+            <ul class="dropdown-menu shadow">
+              <li>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('ambernath-packers-movers-maharashtra') ?>">
+                  <div class="d-flex align-items-center">
+                    <span class="dropdown-item-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                    <div>
+                      <span class="dropdown-item-title">Ambernath</span>
+                      <span class="dropdown-item-desc">East &amp; West trusted shifting</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('ghatkopar-packers-movers-maharashtra') ?>">
+                  <div class="d-flex align-items-center">
+                    <span class="dropdown-item-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                    <div>
+                      <span class="dropdown-item-title">Ghatkopar</span>
+                      <span class="dropdown-item-desc">Top shifting in Ghatkopar</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('badlapur-packers-movers-maharashtra') ?>">
+                  <div class="d-flex align-items-center">
+                    <span class="dropdown-item-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                    <div>
+                      <span class="dropdown-item-title">Badlapur</span>
+                      <span class="dropdown-item-desc">Safe residential relocation</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('kharghar-packers-movers-maharashtra') ?>">
+                  <div class="d-flex align-items-center">
+                    <span class="dropdown-item-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                    <div>
+                      <span class="dropdown-item-title">Kharghar</span>
+                      <span class="dropdown-item-desc">Navi Mumbai moving hub</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('palava-city-dombivli-packers-movers-maharashtra') ?>">
+                  <div class="d-flex align-items-center">
+                    <span class="dropdown-item-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                    <div>
+                      <span class="dropdown-item-title">Palava City Dombivli</span>
+                      <span class="dropdown-item-desc">Express moves in Palava City</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
+                </a>
+              </li>
+            </ul>
           </li>
 
 
