@@ -67,13 +67,36 @@ class MX_Controller
         $this->comp['linkedinhtml'] = "";
         $this->comp['whatsapphtml'] = "https://wa.me/919728546183";
 
-        $this->comp['address'] = "Shop No.17, Building No.2, Deeplaxmi Rajaram Residency, Kalher, Bhiwandi, Mumbai, Pin Code- 421302";
-        $this->comp['address1'] = "Shop No.17, Building No.2, Deeplaxmi Rajaram Residency";
-        $this->comp['address2'] = "Kalher, Bhiwandi, Mumbai, Pin Code- 421302";
-        $this->comp['addressRegion'] = "Mumbai";
-        $this->comp['postalCode'] = "421302";
+        // Default Head Office Address (Ulhasnagar)
+        $this->comp['address'] = "Shop No.1, Ground Floor, Siddhivinayak Apt, Holy Family School, Kailash Colony, Ulhasnagar, Maharashtra 421005";
+        $this->comp['address1'] = "Shop No.1, Ground Floor, Siddhivinayak Apt";
+        $this->comp['address2'] = "Holy Family School, Kailash Colony, Ulhasnagar, Maharashtra 421005";
+        $this->comp['addressRegion'] = "Ulhasnagar";
+        $this->comp['postalCode'] = "421005";
         $this->comp['companystate'] = "Maharashtra";
         $this->comp['themeColor'] = "#942339";
+
+        // City Specific Address Override (Matches Google Map listing for the city)
+        $request_uri = strtolower($_SERVER['REQUEST_URI'] ?? '');
+        if (strpos($request_uri, 'ghatkopar') !== false) {
+            $this->comp['address'] = "Shop No. 09. RB Mehta Rd, Sindhu Wadi Ghatkopar East, Mumbai Maharashtra 400077, Mumbai, Maharashtra 400066";
+            $this->comp['address1'] = "Shop No. 09. RB Mehta Rd, Sindhu Wadi Ghatkopar East, Mumbai";
+            $this->comp['address2'] = "Maharashtra 400077, Mumbai, Maharashtra 400066";
+            $this->comp['addressRegion'] = "Ghatkopar East, Mumbai";
+            $this->comp['postalCode'] = "400066";
+        } elseif (strpos($request_uri, 'badlapur') !== false) {
+            $this->comp['address'] = "Shop no. 13, Gauri Sankalp, near GAURI E, Shirgaon, AMBARNATH, Badlapur, Maharashtra 421503";
+            $this->comp['address1'] = "Shop no. 13, Gauri Sankalp, near GAURI E, Shirgaon";
+            $this->comp['address2'] = "AMBARNATH, Badlapur, Maharashtra 421503";
+            $this->comp['addressRegion'] = "Badlapur";
+            $this->comp['postalCode'] = "421503";
+        } elseif (strpos($request_uri, 'kharghar') !== false) {
+            $this->comp['address'] = "Shop No.22, Bhagwati Greens Central Park, Central Park Road, Owe Village, Sector 35E, Kharghar, Navi Mumbai, Panvel, Maharashtra 410210";
+            $this->comp['address1'] = "Shop No.22, Bhagwati Greens Central Park";
+            $this->comp['address2'] = "Central Park Road, Owe Village, Sector 35E, Kharghar, Navi Mumbai, Panvel 410210";
+            $this->comp['addressRegion'] = "Kharghar, Navi Mumbai";
+            $this->comp['postalCode'] = "410210";
+        }
 
         $this->comp['experience'] = "20+";
         $this->comp['startYear'] = "2004";

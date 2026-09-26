@@ -12,9 +12,6 @@
         <div class="footer-col">
           <!-- Direct Attractive Brand Name -->
           <a href="<?= site_url() ?>" class="footer-brand-title-wrap d-inline-flex align-items-center gap-3 mb-3 text-decoration-none" aria-label="<?= $company3 ?>">
-            <div class="footer-brand-symbol shadow-sm">
-              <i class="bi bi-truck"></i>
-            </div>
             <div class="footer-brand-text-block">
               <span class="footer-brand-title">V-MOVE</span>
               <span class="footer-brand-subtitle">PACKERS &amp; MOVERS</span>

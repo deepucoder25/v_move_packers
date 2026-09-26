@@ -2,6 +2,11 @@
 
 $ct_slug = strtolower(str_replace(" ", "-", $city));
 $st_slug = strtolower(str_replace(" ", "-", $state));
+
+if (empty($address)) {
+    $ci =& get_instance();
+    $address = $ci->comp['address'] ?? '';
+}
 ?>
 
 <!-- ========================================================================
@@ -51,6 +56,32 @@ $st_slug = strtolower(str_replace(" ", "-", $state));
         </div>
     </div>
 
+    <!-- Widget 2: Local Branch Office Address -->
+    <div class="city-widget city-address-widget">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h5 class="city-widget-title mb-0">Branch Office</h5>
+            <span class="badge bg-light text-secondary border px-2 py-1 small"><?= htmlspecialchars($city) ?> Hub</span>
+        </div>
+        <div class="city-address-body">
+            <div class="d-flex align-items-start gap-2 mb-3">
+                <div class="city-address-icon-box flex-shrink-0">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="city-address-info">
+                    <span class="city-address-title d-block"><?= htmlspecialchars($city) ?> Office</span>
+                    <p class="city-address-desc mb-0"><?= htmlspecialchars($address) ?></p>
+                </div>
+            </div>
+            <div class="city-address-meta">
+                <span class="city-meta-item">
+                    <i class="bi bi-clock-history text-secondary"></i> 24x7 Available
+                </span>
+                <span class="city-meta-item">
+                    <i class="bi bi-shield-fill-check text-success"></i> Verified Branch
+                </span>
+            </div>
+        </div>
+    </div>
 
     <!-- Widget 3: Local Shifting Price Estimate Guide -->
     <div class="city-widget">

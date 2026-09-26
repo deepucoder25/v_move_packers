@@ -15,6 +15,9 @@ $this->load->view('review_widget');
 // 5. Frequently Asked Questions Section
 $this->load->view('faqs_widget');
 
-// 6. Cities / Service Locations Section
+// 6. Our Location Map Section
+$this->load->view('map_widget');
+
+// 7. Cities / Service Locations Section
 $this->load->view('city_list');
 ?>
