@@ -61,7 +61,7 @@ if (isset($bc_h1) && !empty($bc_h1)) {
 
 <!-- Breadcrumbs Section -->
 <section class="dynamic-bc-section">
-    <div class="container">
+    <div class="container position-relative">
         <div class="dyn-bc-wrapper">
             <div class="dyn-bc-left">
                 <?php if (!empty($heading)): ?>
@@ -73,7 +73,8 @@ if (isset($bc_h1) && !empty($bc_h1)) {
             </div>
             <nav class="dyn-bc-nav" aria-label="breadcrumb">
                 <a href="<?= site_url() ?>" class="dyn-bc-link">
-                    <i class="bi bi-house-door me-1"></i>Home
+                    <i class="bi bi-house-door-fill"></i>
+                    <span>Home</span>
                 </a>
                 <?php if (isset($breadcrumbs) && is_array($breadcrumbs) && !empty($breadcrumbs)): ?>
                     <?php foreach ($breadcrumbs as $crumb): ?>

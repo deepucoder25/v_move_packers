@@ -25,7 +25,7 @@
 						<th>Posted on</th>
 						<th>Status</th>
 						<th style="width:100px">Timestamp</th>
-						<th style="width:140px">Action</th>
+						<th style="width:190px">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -43,13 +43,15 @@
 						</td>
 						<td>{{y.pd}}</td>
 						<td>
-						  <div style="height:25px;width:25px;border-radius:50%;background:red" ng-if="y.st=='0'"></div>
-	            		  <div style="height:25px;width:25px;border-radius:50%;background:green" ng-if="y.st=='1'"></div>
+						  <div style="height:25px;width:25px;border-radius:50%;background:red;cursor:pointer;" title="Hidden (Click to Show)" ng-click="toggleStatus(y)" ng-if="y.st=='0'"></div>
+	            		  <div style="height:25px;width:25px;border-radius:50%;background:green;cursor:pointer;" title="Visible (Click to Hide)" ng-click="toggleStatus(y)" ng-if="y.st=='1'"></div>
 						</td>
 						<td>{{y.tm}}</td>
 						<td>
-						  <button class="btn btn-xs btn-primary" style="margin-top:6px;" ng-click="openEdit(y)">Reply</button>
-						  <button class="btn btn-xs btn-danger" style="margin-top:6px;" ng-click="deleteReview(y.r_id)">Delete</button>
+						  <button class="btn btn-xs btn-primary" style="margin-top:6px;" ng-click="openEdit(y)" title="Reply to review">Reply</button>
+						  <button class="btn btn-xs btn-warning" style="margin-top:6px;" ng-if="y.st=='1'" ng-click="toggleStatus(y)" title="Hide review from website">Hide</button>
+						  <button class="btn btn-xs btn-success" style="margin-top:6px;" ng-if="y.st=='0'" ng-click="toggleStatus(y)" title="Show review on website">Show</button>
+						  <button class="btn btn-xs btn-danger" style="margin-top:6px;" ng-click="deleteReview(y.r_id)" title="Delete review">Delete</button>
 						</td>
 					</tr>
 				</tbody>

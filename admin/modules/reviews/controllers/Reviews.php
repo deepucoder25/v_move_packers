@@ -15,14 +15,13 @@ class Reviews extends MX_Controller
     }
     function save()
     {
-        if($_GET['id']){
-            $where['r_id']=$_GET['id'];
-            $data['status']=$_GET['status'];
-            echo $this->mdl_reviews->update_data($where,$data);
+        if (isset($_GET['id']) && $_GET['id'] && isset($_GET['status'])) {
+            $where['r_id'] = (int) $_GET['id'];
+            $data['status'] = (int) $_GET['status'];
+            echo $this->mdl_reviews->update_data($where, $data);
         }
         else 
             echo "invalid Request";
-        
     }
     function update_data()
     {

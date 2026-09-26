@@ -33,7 +33,7 @@ $rev = $reviews->result();
             <div class="row">
                 <div class="col-sm-6 offset-sm-3 mb-4 text-left wow fadeInUp">
 
-                    <button type="button" class="btn float-left btn-xs" class="reviews-btn-write-review" data-toggle="modal" data-target="#rvwmdl">Write a Review <i class="bi bi-pencil"></i></button>
+                    <button type="button" class="btn btn-primary rounded-pill px-4 shadow-sm reviews-btn-write-review" data-bs-toggle="modal" data-bs-target="#rvwmdl">Write a Review <i class="bi bi-pencil-square ms-1"></i></button>
                 </div>
             </div>
             <div class="row">
