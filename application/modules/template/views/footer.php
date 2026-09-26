@@ -83,9 +83,6 @@
             <li><a href="<?= site_url('why-choose-us') ?>"><i class="bi bi-chevron-right"></i> Why Choose Us</a></li>
             <li><a href="<?= site_url('reviews') ?>"><i class="bi bi-chevron-right"></i> Customer Reviews</a></li>
             <li><a href="<?= site_url('faqs') ?>"><i class="bi bi-chevron-right"></i> Helpful FAQs</a></li>
-            <li><a href="<?= site_url('privacy-policy') ?>"><i class="bi bi-chevron-right"></i> Privacy Policy</a></li>
-            <li><a href="<?= site_url('terms-and-conditions') ?>"><i class="bi bi-chevron-right"></i> Terms &amp; Conditions</a></li>
-            <li><a href="<?= site_url('our-branches') ?>"><i class="bi bi-chevron-right"></i> Our Branches</a></li>
             <li><a href="<?= site_url('blog') ?>"><i class="bi bi-chevron-right"></i> Moving Blog</a></li>
             <li><a href="<?= site_url('contact-us') ?>"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
           </ul>

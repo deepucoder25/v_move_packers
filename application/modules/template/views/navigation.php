@@ -288,18 +288,6 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
             </a>
             <ul class="dropdown-menu shadow">
               <li>
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('ambernath-packers-movers-maharashtra') ?>">
-                  <div class="d-flex align-items-center">
-                    <span class="dropdown-item-icon"><i class="bi bi-geo-alt-fill"></i></span>
-                    <div>
-                      <span class="dropdown-item-title">Ambernath</span>
-                      <span class="dropdown-item-desc">East &amp; West trusted shifting</span>
-                    </div>
-                  </div>
-                  <i class="bi bi-chevron-right dropdown-item-arrow"></i>
-                </a>
-              </li>
-              <li>
                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= site_url('ghatkopar-packers-movers-maharashtra') ?>">
                   <div class="d-flex align-items-center">
                     <span class="dropdown-item-icon"><i class="bi bi-geo-alt-fill"></i></span>
@@ -468,13 +456,22 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
           </div>
         </div>
 
-        <!-- Our Branches -->
-        <a href="<?= site_url('our-branches') ?>" class="mobile-nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>">
-          <span class="d-flex align-items-center gap-2">
-            <span class="drawer-icon-box"><i class="bi bi-geo-alt-fill"></i></span>
-            <span>Our Branches</span>
-          </span>
-        </a>
+        <!-- Service Areas Accordion -->
+        <div>
+          <a class="mobile-nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>" data-bs-toggle="collapse" href="#mobileBranchesSubmenu" role="button" aria-expanded="<?= $active_tab === 'locations' ? 'true' : 'false' ?>" aria-controls="mobileBranchesSubmenu">
+            <span class="d-flex align-items-center gap-2">
+              <span class="drawer-icon-box"><i class="bi bi-geo-alt-fill"></i></span>
+              <span>Service Areas</span>
+            </span>
+            <i class="bi bi-chevron-down drawer-arrow"></i>
+          </a>
+          <div class="collapse <?= $active_tab === 'locations' ? 'show' : '' ?> mobile-submenu" id="mobileBranchesSubmenu">
+            <a href="<?= site_url('ghatkopar-packers-movers-maharashtra') ?>" class="mobile-sub-link"><i class="bi bi-geo-alt"></i> Ghatkopar</a>
+            <a href="<?= site_url('badlapur-packers-movers-maharashtra') ?>" class="mobile-sub-link"><i class="bi bi-geo-alt"></i> Badlapur</a>
+            <a href="<?= site_url('kharghar-packers-movers-maharashtra') ?>" class="mobile-sub-link"><i class="bi bi-geo-alt"></i> Kharghar</a>
+            <a href="<?= site_url('palava-city-dombivli-packers-movers-maharashtra') ?>" class="mobile-sub-link"><i class="bi bi-geo-alt"></i> Palava City Dombivli</a>
+          </div>
+        </div>
 
 
 
@@ -543,7 +540,7 @@ $nav_schema = [
     ["@type" => "SiteNavigationElement", "name" => "Office Relocation", "url" => site_url('office-relocation')],
     ["@type" => "SiteNavigationElement", "name" => "Car Transportation", "url" => site_url('car-transportation')],
     ["@type" => "SiteNavigationElement", "name" => "Bike Transportation", "url" => site_url('bike-transportation')],
-    ["@type" => "SiteNavigationElement", "name" => "Our Branches", "url" => site_url('our-branches')],
+    ["@type" => "SiteNavigationElement", "name" => "Service Areas", "url" => site_url('our-branches')],
     ["@type" => "SiteNavigationElement", "name" => "Moving Blog", "url" => site_url('blog')],
     ["@type" => "SiteNavigationElement", "name" => "Contact Us", "url" => site_url('contact-us')]
   ]

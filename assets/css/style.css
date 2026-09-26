@@ -6295,5 +6295,803 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   0. City Hero Slider Breadcrumb
+   -------------------------------------------------------------------------- */
+.city-hero-breadcrumb {
+  margin-bottom: 0.85rem;
+}
 
+.city-hero-breadcrumb-list {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.55rem;
+  padding: 0.35rem 0.95rem;
+  margin: 0;
+  list-style: none;
+  background: rgba(18, 21, 27, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
 
+.city-hero-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.2;
+}
+
+.city-hero-breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.city-hero-breadcrumb-item a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.city-hero-breadcrumb-item a i {
+  font-size: 0.85rem;
+  color: #ff6b7a;
+}
+
+.city-hero-breadcrumb-sep {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.65rem;
+}
+
+.city-hero-breadcrumb-item.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.city-hero-breadcrumb-item.active span {
+  color: #ffd6da;
+}
+
+/* --------------------------------------------------------------------------
+   1. City Section Wrappers
+   -------------------------------------------------------------------------- */
+.city-section {
+  padding: 3.75rem 0;
+  background-color: var(--nav-surface);
+  position: relative;
+}
+
+.city-about-card {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.25rem;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--nav-dark) 5%, transparent);
+  margin-bottom: 2rem;
+}
+
+.city-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 10%, var(--nav-light));
+  color: var(--nav-primary);
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 22%, transparent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50rem;
+  margin-bottom: 0.85rem;
+}
+
+.city-section-title {
+  font-size: clamp(1.75rem, 3.2vw, 2.45rem);
+  font-weight: 800;
+  color: var(--nav-dark);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.25rem;
+}
+
+.city-section-title span {
+  color: var(--nav-primary);
+}
+
+.city-section-title-sm {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  margin-top: 1.75rem;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.city-section-title-sm i {
+  color: var(--nav-primary);
+}
+
+/* --------------------------------------------------------------------------
+   2. Feature Pills & Chips
+   -------------------------------------------------------------------------- */
+.city-feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.city-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 7%, var(--nav-surface));
+  color: var(--nav-dark);
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 18%, transparent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 50rem;
+  transition: all 0.2s ease;
+}
+
+.city-pill:hover {
+  background-color: var(--nav-primary);
+  color: var(--nav-light);
+  border-color: var(--nav-primary);
+  transform: translateY(-2px);
+}
+
+.city-pill i {
+  color: var(--nav-primary);
+  font-size: 1.05rem;
+}
+
+.city-pill:hover i {
+  color: var(--nav-light);
+}
+
+/* --------------------------------------------------------------------------
+   3. Content Cards & Checklist
+   -------------------------------------------------------------------------- */
+.city-content-card {
+  background-color: var(--nav-surface);
+  border: 1px solid var(--nav-border);
+  border-radius: 1rem;
+  padding: 1.75rem 1.65rem;
+  margin-top: 1.5rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--nav-dark) 80%, transparent);
+}
+
+.city-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.25rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem 1.25rem;
+}
+
+.city-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--nav-dark);
+}
+
+.city-checklist li i {
+  color: var(--nav-primary);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Services Grid Cards
+   -------------------------------------------------------------------------- */
+.city-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.15rem;
+  margin: 1.75rem 0;
+}
+
+.city-service-box {
+  background: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 0.95rem;
+  padding: 1.25rem;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.city-service-box:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--nav-primary) 35%, transparent);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--nav-dark) 6%, transparent);
+}
+
+.city-service-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 10%, var(--nav-surface));
+  color: var(--nav-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 18%, transparent);
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.city-service-box:hover .city-service-icon {
+  background-color: var(--nav-primary);
+  color: var(--nav-light);
+}
+
+.city-service-title {
+  font-size: 0.975rem;
+  font-weight: 700;
+  color: var(--nav-dark);
+  margin-bottom: 0.25rem;
+}
+
+.city-service-desc {
+  font-size: 0.825rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--nav-dark) 70%, transparent);
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. City Reviews Section
+   -------------------------------------------------------------------------- */
+.city-reviews-wrap {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.25rem;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--nav-dark) 5%, transparent);
+  margin-bottom: 2rem;
+}
+
+.city-rating-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--nav-surface);
+  border: 1px solid var(--nav-border);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.city-score-num {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  line-height: 1;
+}
+
+.city-stars {
+  color: #ffc107;
+  font-size: 1.15rem;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.city-review-card {
+  background: var(--nav-surface);
+  border: 1px solid var(--nav-border);
+  border-radius: 0.95rem;
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+}
+
+.city-review-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--nav-primary) 30%, transparent);
+}
+
+.city-reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--nav-primary) 12%, var(--nav-surface));
+  color: var(--nav-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 20%, transparent);
+}
+
+/* City Reviews Swiper Carousel */
+.city-reviews-swiper {
+  position: relative;
+  overflow: hidden;
+  padding: 4px 2px 8px 2px;
+}
+
+.city-reviews-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.city-reviews-swiper .city-review-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.city-swiper-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--nav-border);
+  background-color: var(--nav-light);
+  color: var(--nav-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.city-swiper-nav-btn:hover {
+  background-color: var(--nav-primary);
+  border-color: var(--nav-primary);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.city-reviews-pagination {
+  position: static !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: auto !important;
+}
+
+.city-reviews-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: color-mix(in srgb, var(--nav-dark) 25%, transparent);
+  opacity: 1;
+  border-radius: 50rem;
+  transition: all 0.3s ease;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.city-reviews-pagination .swiper-pagination-bullet-active {
+  width: 24px;
+  background-color: var(--nav-primary);
+}
+
+/* --------------------------------------------------------------------------
+   6. City FAQ Accordion
+   -------------------------------------------------------------------------- */
+.city-faq-wrap {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.25rem;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--nav-dark) 5%, transparent);
+  margin-bottom: 2rem;
+}
+
+.city-faq-accordion .accordion-item {
+  border: 1px solid var(--nav-border);
+  background-color: var(--nav-light);
+  margin-bottom: 0.85rem;
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+}
+
+.city-faq-accordion .accordion-button {
+  background-color: var(--nav-light);
+  color: var(--nav-dark);
+  font-size: 0.975rem;
+  font-weight: 700;
+  padding: 1.15rem 1.35rem;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.city-faq-accordion .accordion-button:not(.collapsed) {
+  background-color: color-mix(in srgb, var(--nav-primary) 6%, var(--nav-light));
+  color: var(--nav-primary);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.city-faq-accordion .accordion-body {
+  padding: 1.25rem 1.35rem;
+  font-size: 0.915rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--nav-dark) 78%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   7. City Sidebar & Widgets
+   -------------------------------------------------------------------------- */
+.city-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+@media (min-width: 992px) {
+  .city-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+    z-index: 15;
+  }
+}
+
+.city-widget {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1rem;
+  padding: 1.35rem 1.25rem;
+  margin-bottom: 0;
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--nav-dark) 4%, transparent);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.city-widget:hover {
+  border-color: color-mix(in srgb, var(--nav-primary) 20%, var(--nav-border));
+}
+
+.city-widget-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--nav-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid color-mix(in srgb, var(--nav-primary) 22%, transparent);
+  position: relative;
+  letter-spacing: -0.01em;
+}
+
+.city-widget-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 36px;
+  height: 2px;
+  background-color: var(--nav-primary);
+}
+
+/* Contact / Assistance Widget */
+.city-contact-card {
+  background: linear-gradient(145deg, #151921 0%, #1f1418 60%, color-mix(in srgb, var(--nav-primary) 25%, #151921) 100%);
+  color: var(--nav-light);
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 35%, transparent);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--nav-dark) 18%, transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.city-contact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--nav-primary), #e63946, var(--nav-primary));
+}
+
+.city-contact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: color-mix(in srgb, var(--nav-primary) 25%, rgba(0, 0, 0, 0.4));
+  border: 1px solid color-mix(in srgb, var(--nav-primary) 45%, transparent);
+  color: #ff9da7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50rem;
+  margin-bottom: 0.75rem;
+}
+
+.city-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  animation: cityPulse 1.8s infinite;
+}
+
+@keyframes cityPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(37, 211, 102, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.city-contact-heading {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--nav-light);
+  line-height: 1.35;
+  margin-bottom: 0.45rem;
+}
+
+.city-contact-sub {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+  margin-bottom: 1.15rem;
+}
+
+.city-contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.city-btn-call {
+  background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-hover) 100%);
+  color: var(--nav-light) !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 50rem;
+  padding: 0.65rem 1.25rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--nav-primary) 40%, transparent);
+  transition: all 0.2s ease;
+}
+
+.city-btn-call:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--nav-primary) 60%, transparent);
+}
+
+.city-btn-whatsapp {
+  background-color: #25d366;
+  color: #ffffff !important;
+  border-radius: 50rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.65rem 1.25rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: all 0.2s ease;
+}
+
+.city-btn-whatsapp:hover {
+  background-color: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.city-btn-estimate {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--nav-light);
+  border-radius: 50rem;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  padding: 0.55rem 1.25rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+}
+
+.city-btn-estimate:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--nav-light);
+}
+
+.city-trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.725rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.city-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.city-trust-dot {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Shifting Rates Table */
+.city-rate-table {
+  width: 100%;
+  font-size: 0.8125rem;
+  margin-bottom: 0;
+}
+
+.city-rate-table th {
+  background-color: var(--nav-surface);
+  color: var(--nav-dark);
+  font-weight: 700;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--nav-border);
+  font-size: 0.785rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.city-rate-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--nav-border);
+  color: color-mix(in srgb, var(--nav-dark) 85%, transparent);
+  font-size: 0.825rem;
+}
+
+.city-rate-table tr:hover td {
+  background-color: color-mix(in srgb, var(--nav-primary) 4%, transparent);
+}
+
+.city-rate-table tr:last-child td {
+  border-bottom: none;
+}
+
+.city-rate-price {
+  font-weight: 800;
+  color: var(--nav-primary);
+}
+
+.city-rate-note {
+  font-size: 0.735rem;
+  color: color-mix(in srgb, var(--nav-dark) 60%, transparent);
+  margin-top: 0.65rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   8. City Map Section
+   -------------------------------------------------------------------------- */
+.city-map-wrap {
+  background-color: var(--nav-light);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.25rem;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--nav-dark) 5%, transparent);
+  margin-bottom: 2rem;
+}
+
+.city-map-container {
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--nav-border);
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--nav-dark) 4%, transparent);
+  background-color: var(--nav-surface);
+}
+
+.city-map-container iframe,
+.city-map-container .pm-city-map-iframe {
+  display: block;
+  width: 100% !important;
+  height: 380px !important;
+  border: 0 !important;
+  vertical-align: middle;
+}
+
+.city-map-footer {
+  border-top: 1px dashed var(--nav-border);
+}
+
+/* --------------------------------------------------------------------------
+   9. Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .city-section {
+    padding: 3rem 0;
+  }
+  
+  .city-about-card,
+  .city-map-wrap,
+  .city-reviews-wrap,
+  .city-faq-wrap {
+    padding: 1.85rem 1.35rem;
+  }
+  
+  .city-sidebar {
+    position: static;
+    margin-top: 2rem;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .city-hero-breadcrumb {
+    margin-bottom: 0.65rem;
+  }
+
+  .city-hero-breadcrumb-list {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    gap: 0.25rem 0.4rem;
+  }
+
+  .city-section {
+    padding: 2.5rem 0;
+  }
+
+  .city-map-container iframe,
+  .city-map-container .pm-city-map-iframe {
+    height: 280px !important;
+  }
+  
+  .city-checklist {
+    grid-template-columns: 1fr;
+  }
+  
+  .city-service-grid {
+    grid-template-columns: 1fr;
+  }
+}
